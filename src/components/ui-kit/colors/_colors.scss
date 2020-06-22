@@ -1,0 +1,143 @@
+@import "./assets/scss/fonts.scss";
+
+%dark-shade-100 {
+	color: rgba($color: #1F2041, $alpha: 1.0);
+}
+
+%dark-shade-75 {
+	color: rgba($color: #1F2041, $alpha: 0.75);
+}
+
+%dark-shade-50 {
+	color: rgba($color: #1F2041, $alpha: 0.50);
+}
+
+%dark-shade-25 {
+	color: rgba($color: #1F2041, $alpha: 0.25);
+}
+
+%dark-shade-5 {
+	color: rgba($color: #1F2041, $alpha: 0.05);
+}
+
+%purple {
+	color: #BC9CFF;
+}
+
+%green {
+	color: #6fcf97;
+}
+
+%font-quicksand-h1 {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	@extend %dark-shade-100;
+}
+
+%font-quicksand-h2 {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 24px;
+	@extend %dark-shade-100;
+}
+
+%font-montserrat-h3 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	@extend %dark-shade-100;
+}
+
+%font-montserrat-body {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	@extend %dark-shade-75;
+}
+
+.rectangle {
+	max-width: 270px;
+	height: 70px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: flex-start;
+	margin-bottom: 20px;
+}
+
+.rectangle__title {
+	@extend %font-quicksand-h2;
+	margin: 0;
+}
+
+.rectangle__text {
+	@extend %font-montserrat-body;
+	margin: 0;
+}
+
+.rectangle__color--100 {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: rgba($color: #1f2041, $alpha: 1.0);
+	margin-right: 40px;
+}
+
+.rectangle__color--75 {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: rgba($color: #1f2041, $alpha: 0.75);
+	margin-right: 40px;
+}
+
+.rectangle__color--50 {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: rgba($color: #1f2041, $alpha: 0.50);
+	margin-right: 40px;
+}
+
+.rectangle__color--25 {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: rgba($color: #1f2041, $alpha: 0.25);
+	margin-right: 40px;
+}
+
+.rectangle__color--5 {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: rgba($color: #1f2041, $alpha: 0.05);
+	margin-right: 40px;
+}
+
+.rectangle__color--purple {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: #BC9CFF;
+	margin-right: 40px;
+}
+
+.rectangle__color--green {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+	background-color: #6FCF97;
+	margin-right: 40px;
+}

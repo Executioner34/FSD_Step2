@@ -1,0 +1,14 @@
+mixin rectangle(title,text)
+	.rectangle
+		div(class!=attributes.class)
+		h2.rectangle__title=title
+		p.rectangle__text=text
+
+.colors
+			+rectangle('Dark Shade 100%', '#1F2041')(class="rectangle__color--100")
+			+rectangle('Dark Shade 75%', '#1F2041')(class="rectangle__color--75")
+			+rectangle('Dark Shade 50%', '#1F2041')(class="rectangle__color--50")
+			+rectangle('Dark Shade 25%', '#1F2041')(class="rectangle__color--25")
+			+rectangle('Dark Shade 5%', '#1F2041')(class="rectangle__color--5")
+			+rectangle('Purple', '#BC9CFF')(class="rectangle__color--purple")
+			+rectangle('Green', '#6FCF97')(class="rectangle__color--green")

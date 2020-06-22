@@ -1,5 +1,19 @@
-@import "./assets/scss/fonts.scss";
+@import '~normalize.css';
+@import './components/ui-kit/colors/colors';
+@import './components/ui-kit/fonts/fonts';
+
+body {
+	background-color: #E5E5E5;
+}
 
 img {
-    margin: 30px 30px;
+	margin: 30px 0 67px 30px;
+}
+
+.container {
+	margin-left: 150px;
+	display: grid;
+	grid-template-rows: 610px 321px;
+	grid-template-columns: 270px 403px;
+	grid-gap: 427px;
 }
