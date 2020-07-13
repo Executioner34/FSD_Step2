@@ -18,15 +18,19 @@ p {
 .fonts {
 	display: flex;
 	flex-direction: column;
+	box-sizing: content-box;
 	.fonts__item {
 		display: flex;
+		margin-bottom: 30px;
 		.fonts__title {
 			@extend %dark-shade-25;
 			font-weight: normal;
 			margin-right: 30px;
+			margin-top: 0px;
 		}
 		.fonts__text {
 			flex-grow: 1;
+			margin-top: 0px;
 		}
 	}
 	.fonts__item:nth-of-type(3) {

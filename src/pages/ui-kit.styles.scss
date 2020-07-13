@@ -1,0 +1,21 @@
+@import '~normalize.css';
+@import '../assets/scss/fonts';
+@import '../components/colors/colors';
+@import '../components/types/types';
+@import '../components/textForm/textForm';
+
+body {
+	background-color: #ffffff;
+}
+
+.logo {
+	margin: 30px 0 67px 30px;
+}
+
+.container-colors-and-types {
+	margin-left: 150px;
+	display: grid;
+	grid-template-rows: 610px;
+	grid-template-columns: 270px 403px;
+	grid-gap: 427px;
+}

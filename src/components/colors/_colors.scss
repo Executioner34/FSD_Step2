@@ -1,5 +1,3 @@
-@import "./assets/scss/fonts.scss";
-
 %dark-shade-100 {
 	color: rgba($color: #1F2041, $alpha: 1.0);
 }
@@ -32,8 +30,7 @@
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 30px;
+	font-size: 1.5rem;
 	@extend %dark-shade-100;
 }
 
@@ -41,8 +38,7 @@
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 19px;
-	line-height: 24px;
+	font-size: 1.188rem;
 	@extend %dark-shade-100;
 }
 
@@ -50,8 +46,7 @@
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 	@extend %dark-shade-100;
 }
@@ -60,8 +55,7 @@
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
-	line-height: 24px;
+	font-size: 0.875rem;
 	@extend %dark-shade-75;
 }
 

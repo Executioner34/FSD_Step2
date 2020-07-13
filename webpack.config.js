@@ -78,7 +78,7 @@ module.exports = {
      plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: './src/ui-kit.pug',
+        template: './src/pages/ui-kit.pug',
         inject: true
       }),
       new MiniCssExtractPlugin(

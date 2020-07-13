@@ -1,0 +1,9 @@
+mixin TextField(title,text,placeholder,type)
+	.text-field
+		.text-field__title
+			h3.title=title
+			if text
+				p.text=text
+		input(class!= attributes.class type=type placeholder=placeholder)
+
+

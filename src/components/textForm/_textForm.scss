@@ -1,0 +1,42 @@
+%inputHover {
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.text-field {
+	max-width: 320px;
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		h3 {
+			align-self: flex-end;
+			margin: 0;
+		};
+		p {
+			align-self: flex-end;
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}
+	.text-field__input {
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
+		box-sizing: border-box;
+		width: 320px;
+		height: 44px;
+		margin-top: 5px;
+		@extend %font-montserrat-body;
+		color: rgba(31, 32, 65, 0.25);
+		&:hover {
+			@extend %inputHover;
+		};
+		&:focus {
+			@extend %inputHover;
+			outline: none;
+		};
+	};
+};
+
+.text-field__input--hover--focus {
+	@extend %inputHover
+};
