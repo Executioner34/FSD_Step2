@@ -7,22 +7,26 @@ html(lang="ru")
 	body
 		img.logo(src="./src/assets/images/logo/Group.svg", alt="logo")
 		.container-colors-and-types
-			.colors
-				+rectangle('Dark Shade 100%', '#1F2041')(class="rectangle__color--100")
-				+rectangle('Dark Shade 75%', '#1F2041')(class="rectangle__color--75")
-				+rectangle('Dark Shade 50%', '#1F2041')(class="rectangle__color--50")
-				+rectangle('Dark Shade 25%', '#1F2041')(class="rectangle__color--25")
-				+rectangle('Dark Shade 5%', '#1F2041')(class="rectangle__color--5")
-				+rectangle('Purple', '#BC9CFF')(class="rectangle__color--purple")
-				+rectangle('Green', '#6FCF97')(class="rectangle__color--green")
-			include ../components/types/types
+			ul.colors
+				+rectangle({class: 'rectangle__color--100', title: 'Dark Shade 100%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--75', title: 'Dark Shade 75%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--50', title: 'Dark Shade 50%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--25', title: 'Dark Shade 25%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--5', title: 'Dark Shade 5%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--purple', title: 'Purple', text: '#BC9CFF'})
+				+rectangle({class: 'rectangle__color--green', title: 'Green', text: '#6FCF97'})
+			include ../components/types/types.pug
 		img.logo(src="./src/assets/images/logo/Group.svg", alt="logo")
 		.container-form-elements
-			+TextField('Text Field', 'Default', 'Email', 'email')(class="text-field__input")
-			+TextField('Text Field', 'Hover / Focus', 'This is pretty awesome', 'text')(class="text-field__input text-field__input--hover--focus")
-			+TextField('Dropdown', 'Default', 'Сколько гостей', 'text')(class="text-field__input input-dropdown")
-			+TextField('masked text field', 'Default', 'ДД.ММ.ГГГГ', 'text')(class="text-field__input")
-			+TextField('date Dropdown', false, 'ДД.ММ.ГГГГ', 'text')(class="text-field__input input-date-dropdown")
-			+TextField('date Dropdown', false, '19.08.2019', 'text')(class="text-field__input input-date-dropdown")
-			+TextField('filter date dropdown', false, '19 авг - 23 авг', 'text')(class="text-field__input input-filter-date-dropdown")
-			+TextField('subscription text field', false, 'Email', 'email')(class="text-field__input input--subscription")
+			.text-forms
+				.field-forms
+					+inputTextForm({title: "Text Field", text: "Default", type: "email", placeholder: "Email" })
+					+inputTextForm({title: "Text Field", text: "Hover / Focus", type: "text", placeholder: "This is pretty awesome", isFocus: true })
+					+inputTextForm({title: "Dropdown", text: "Default", type: "text", placeholder: "Сколько гостей", isDropdown: true })
+					+inputTextForm({title: "masked text field", text: "Default", type: "text", placeholder: "ДД.ММ.ГГГГ"})
+				.date-forms
+					.date-forms__dropdowns
+						+inputTextForm({title: "date Dropdown", type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
+						+inputTextForm({title: "date Dropdown", type: "text", placeholder: "19.08.2019", isDateDropdown: true})
+					+inputTextForm({title: "filter date dropdown", type: "text", placeholder: "19 авг - 23 авг", isFilterDateDropdown: true})
+					+inputTextForm({title: "subscription text field", type: "email", placeholder: "Email", isButton: true })

@@ -1,9 +1,13 @@
-mixin TextField(title,text,placeholder,type)
-	.text-field
-		.text-field__title
-			h3.title=title
-			if text
-				p.text=text
-		input(class!= attributes.class type=type placeholder=placeholder)
+include ./_textForm-header/textForm-header
 
-
+mixin inputTextForm(options)
+	-
+		var inputClassName = "input"
+		inputClassName += options.isFocus ? " input--active" : ""
+		inputClassName += options.isDropdown ? " input-dropdown" : ""
+		inputClassName += options.isButton ? " input-button" : ""
+		inputClassName += options.isDateDropdown ? " input-date-dropdown" : ""
+		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown" : ""
+	.text-form
+		+HeaderTextForm({title: options.title, text: options.text})
+		input(class=inputClassName type=options.type placeholder=options.placeholder)

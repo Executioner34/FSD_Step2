@@ -1,0 +1,5 @@
+mixin HeaderTextForm(options)
+	.text-form__header
+		span(class="text-form__title font-level-h3")=options.title
+		if options.text
+		span(class="text-form__text font-level-body")=options.text

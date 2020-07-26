@@ -1,42 +1,54 @@
+@import './_textForm-header/textForm-header';
+
 %inputHover {
-	border: 1px solid rgba(31, 32, 65, 0.5);
-	color: rgba(31, 32, 65, 0.75);
+	border-color: $dark-50;
+	color: $dark-75;
 }
 
-.text-field {
+.text-form {
 	max-width: 320px;
-	&__title {
-		display: flex;
-		justify-content: space-between;
-		h3 {
-			align-self: flex-end;
-			margin: 0;
-		};
-		p {
-			align-self: flex-end;
-			margin: 0;
-			text-transform: uppercase;
-		}
-	}
-	.text-field__input {
-		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
-		box-sizing: border-box;
-		width: 320px;
-		height: 44px;
-		margin-top: 5px;
-		@extend %font-montserrat-body;
-		color: rgba(31, 32, 65, 0.25);
-		&:hover {
-			@extend %inputHover;
-		};
-		&:focus {
-			@extend %inputHover;
-			outline: none;
-		};
-	};
-};
+}
 
-.text-field__input--hover--focus {
-	@extend %inputHover
-};
+.input {
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 44px;
+	@extend %font-montserrat-body;
+	outline: none;
+	padding: 10px 0 8px 15px;
+	margin-top: 5px;
+	&::placeholder {
+		color: $dark-25;
+	}
+	&:hover,
+	&:focus {
+		@extend %inputHover;
+	}
+}
+
+.text-form .input--active {
+	@extend %inputHover;
+	&::placeholder {
+		color: $dark-75;
+	}
+}
+
+.text-form .input-dropdown::placeholder {
+	color: $dark-75;
+}
+
+.text-form .input-filter-date-dropdown {
+	width: 266px;
+	&::placeholder {
+		color: $dark-75;
+	}
+}
+
+.text-form .input-date-dropdown {
+	width: 150px;
+	&::placeholder {
+		color: $dark-75;
+	}
+}

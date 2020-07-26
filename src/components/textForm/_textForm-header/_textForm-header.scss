@@ -1,0 +1,13 @@
+.text-form__header {
+	display: flex;
+	justify-content: space-between;
+		.text-form__title {
+			align-self: flex-end;
+			margin: 0;
+		};
+		.text-form__text {
+			align-self: flex-end;
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}

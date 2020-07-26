@@ -1,45 +1,50 @@
 
 h1 {
 	@extend %font-quicksand-h1;
+	line-height: 30px;
 }
 
 h2 {
 	@extend %font-quicksand-h2;
+	line-height: 24px;
 }
 
 h3 {
 	@extend %font-montserrat-h3;
+	line-height: 15px;
 }
 
 p {
 	@extend %font-montserrat-body;
+	line-height: 24px;
 }
 
 .fonts {
 	display: flex;
 	flex-direction: column;
-	box-sizing: content-box;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 	.fonts__item {
 		display: flex;
-		margin-bottom: 30px;
+		justify-content: flex-start;
+		margin-bottom: 50px;
 		.fonts__title {
-			@extend %dark-shade-25;
+			color: $dark-25;
 			font-weight: normal;
-			margin-right: 30px;
-			margin-top: 0px;
 		}
 		.fonts__text {
-			flex-grow: 1;
-			margin-top: 0px;
+			margin-left: 30px;
 		}
 	}
-	.fonts__item:nth-of-type(3) {
-		margin-left: 20px;
-	}
-	.fonts__item:nth-of-type(2) {
-		margin-left: 12px;
-	}
-	.fonts__item:first-of-type {
-		margin-left: 12px;
-	}
+		.fonts__item:nth-of-type(3) {
+			margin-left: 20px;
+		}
+
+		.fonts__item:nth-of-type(2) {
+			margin-left: 12px;
+		}
+
+		.fonts__item:first-of-type {
+			margin-left: 12px;
+		}
 }

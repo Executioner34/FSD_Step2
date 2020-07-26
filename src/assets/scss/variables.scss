@@ -1,0 +1,62 @@
+$dark-100: rgba($color: #1F2041, $alpha: 1.0);
+
+$dark-75: rgba($color: #1F2041, $alpha: 0.75);
+
+$dark-50: rgba($color: #1F2041, $alpha: 0.50);
+
+$dark-25: rgba($color: #1F2041, $alpha: 0.25);
+
+$dark-5: rgba($color: #1F2041, $alpha: 0.05);
+
+$purple: #BC9CFF;
+
+$green: #6fcf97;
+
+%font-quicksand-h1 {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: $dark-100;
+}
+
+%font-quicksand-h2 {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.188rem;
+	color: $dark-100;
+}
+
+%font-montserrat-h3 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	color: $dark-100;
+}
+
+%font-montserrat-body {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 0.875rem;
+	color: $dark-75;
+}
+
+.font-level-h1 {
+	@extend %font-quicksand-h1;
+}
+
+.font-level-h2 {
+	@extend %font-quicksand-h2;
+}
+
+.font-level-h3 {
+	@extend %font-montserrat-h3;
+}
+
+.font-level-body {
+	@extend %font-montserrat-body;
+}

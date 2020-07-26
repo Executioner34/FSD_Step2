@@ -1,4 +1,7 @@
 @import '~normalize.css';
+@import 'reset-css';
+@import '../assets/fonts/font-awesome-4.7.0/scss/font-awesome.scss';
+@import '../assets/scss/variables.scss';
 @import '../assets/scss/fonts';
 @import '../components/colors/colors';
 @import '../components/types/types';
@@ -18,4 +21,26 @@ body {
 	grid-template-rows: 610px;
 	grid-template-columns: 270px 403px;
 	grid-gap: 427px;
+}
+
+.text-forms {
+	margin-left: 140px;
+	display: grid;
+	grid-gap: 40px;
+}
+
+.field-forms {
+	display: grid;
+	grid-gap: 20px;
+}
+
+.date-forms {
+	display: grid;
+	grid-gap: 40px;
+}
+
+.date-forms__dropdowns {
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
 }

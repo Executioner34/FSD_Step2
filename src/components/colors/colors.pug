@@ -1,5 +1,5 @@
-mixin rectangle(title,text)
-	.rectangle
-		div(class!=attributes.class)
-		h2.rectangle__title=title
-		p.rectangle__text=text
+mixin rectangle(options)
+	li.rectangle
+		div(class=options.class)
+		span(class="rectangle__title font-level-h1")=options.title
+		span(class="rectangle__text font-level-body")=options.text
