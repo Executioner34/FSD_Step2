@@ -46,6 +46,5 @@ html(lang="ru")
 						+radio({text: "Женщина", value: "female"})
 				.toggle-buttons
 					span(class="toggle-buttons__title font-level-h3") Toggle
-					.toggle-buttons__list
-						+toggle({text: "Получать спецпредложения", value: "offer", isActive: true})
-						+toggle({text: "Получать спецпредложения", value: "offer"})
+					+toggle({text: "Получать спецпредложения", value: "offer", isActive: true})
+					+toggle({text: "Получать спецпредложения", value: "offer"})

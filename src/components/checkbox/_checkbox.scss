@@ -25,7 +25,7 @@
 .checkbox-button__input:checked + .checkbox-button__fake::before {
 	opacity: 1;
 	background: url("../components/checkbox/checked/checked.svg") no-repeat;
-	background-position: center center;
+	background-position: 5px 5px;
 	background-size: 50% 50%;
 	border-color: $purple;
 }
