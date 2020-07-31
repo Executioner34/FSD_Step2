@@ -1,0 +1,11 @@
+mixin radio(options)
+	-
+		var radioClassName = "radio-button__input"
+		radioClassName += options.isActive ? " radio--active" : ""
+	.radio-button
+		label(class="radio-button__label")
+			if (options.isActive)
+				input(class=radioClassName type="radio" value=options.value name="sex" checked )
+			else
+				input(class=radioClassName type="radio" value=options.value name="sex")
+			span(class="radio-button__text font-level-body")=options.text

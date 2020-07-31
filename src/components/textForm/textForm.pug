@@ -8,6 +8,7 @@ mixin inputTextForm(options)
 		inputClassName += options.isButton ? " input-button" : ""
 		inputClassName += options.isDateDropdown ? " input-date-dropdown" : ""
 		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown" : ""
+		inputClassName += options.isSubscribe ? " input-subscribe" : ""
 	.text-form
 		+HeaderTextForm({title: options.title, text: options.text})
 		input(class=inputClassName type=options.type placeholder=options.placeholder)

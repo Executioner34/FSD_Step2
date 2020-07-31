@@ -1,11 +1,13 @@
-@import '~normalize.css';
 @import 'reset-css';
+@import '~normalize.css';
 @import '../assets/fonts/font-awesome-4.7.0/scss/font-awesome.scss';
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/fonts';
 @import '../components/colors/colors';
 @import '../components/types/types';
 @import '../components/textForm/textForm';
+@import '../components/checkbox/checkbox';
+@import '../components/radio/radio';
 
 body {
 	background-color: #ffffff;
@@ -23,8 +25,14 @@ body {
 	grid-gap: 427px;
 }
 
-.text-forms {
+.container-form-elements {
+	display: grid;
 	margin-left: 140px;
+	grid-template-columns: 320px 320px;
+	grid-column-gap: 126px;
+}
+
+.text-forms {
 	display: grid;
 	grid-gap: 40px;
 }
@@ -43,4 +51,25 @@ body {
 	width: 320px;
 	display: flex;
 	justify-content: space-between;
+}
+
+.checkboxs-and-rate-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.checkboxs-buttons {
+	display: grid;
+	grid-gap: 10px;
+	margin-bottom: 41px;
+	&__title {
+		margin-bottom: 7px;
+	}
+}
+
+.radio-buttons {
+	display: grid;
+	grid-gap: 16px;
+	margin-bottom: 41px;
 }
