@@ -1,0 +1,10 @@
+mixin toggle(options)
+	-
+		var toggleClassName = "toggle-button__input"
+	.toggle-button
+		label(class="toggle-button__label")
+			if (options.isActive)
+				input(class=toggleClassName type="checkbox" value=options.value checked )
+			else
+				input(class=toggleClassName type="checkbox" value=options.value)
+			span(class="toggle-button__text font-level-body")=options.text

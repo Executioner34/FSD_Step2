@@ -2,6 +2,7 @@ include ../components/colors/colors
 include ../components/textForm/textForm
 include ../components/checkbox/checkbox
 include ../components/radio/radio
+include ../components/toggle/toggle
 
 doctype html
 html(lang="ru")
@@ -43,3 +44,8 @@ html(lang="ru")
 					.radio-buttons__list
 						+radio({text: "Мужчина", value: "male", isActive: true})
 						+radio({text: "Женщина", value: "female"})
+				.toggle-buttons
+					span(class="toggle-buttons__title font-level-h3") Toggle
+					.toggle-buttons__list
+						+toggle({text: "Получать спецпредложения", value: "offer", isActive: true})
+						+toggle({text: "Получать спецпредложения", value: "offer"})
