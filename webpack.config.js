@@ -24,7 +24,10 @@ module.exports = {
 			//PUG
 			{
 				test: /\.pug$/,
-				loader: 'pug-loader'
+				loader: 'pug-loader',
+				options: {
+					root: path.resolve(__dirname, 'src/assets/images')
+				}
 			},
 			//css
 			{
@@ -60,7 +63,8 @@ module.exports = {
 				loader: 'file-loader',
 				exclude: [path.resolve(__dirname, 'src/assets/fonts')],
 				options: {
-					name: 'images/[name].[ext]'
+					name: 'images/[name].[ext]',
+					esModule: false,
 				}
 			}
 		],

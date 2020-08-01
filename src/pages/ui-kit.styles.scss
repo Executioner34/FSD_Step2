@@ -9,6 +9,7 @@
 @import '../components/checkbox/checkbox';
 @import '../components/radio/radio';
 @import '../components/toggle/toggle';
+@import '../components/like-button/like-button';
 
 body {
 	background-color: #ffffff;
@@ -73,4 +74,17 @@ body {
 	display: grid;
 	grid-gap: 16px;
 	margin-bottom: 41px;
+}
+
+.toggle-buttons {
+	margin-bottom: 41px;
+}
+
+.like-buttons {
+	display: grid;
+	grid-gap: 16px;
+	margin-bottom: 41px;
+	&__list {
+		display: flex;
+	}
 }

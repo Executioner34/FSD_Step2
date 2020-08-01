@@ -1,0 +1,45 @@
+.like-button__button {
+	position: relative;
+	width: 39px;
+	height: 19px;
+	background-color: #FFFFFF;
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	border: none;
+	margin-right: 10px;
+	border-radius: 9.5px;
+		&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: -1px;
+		left: -1px;
+		background-color: $dark-25;
+		width: 41px;
+		height: 21px;
+		border-radius: 10px;
+	}
+}
+
+.like-button__wrapper .js-like-button__button--active::after {
+	background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.like-button__like {
+	font-size: 10px;
+	line-height: 9px;
+	color: $dark-25;
+}
+
+.like-button__number {
+	font-size: 10px;
+	line-height: 12px;
+	color: $dark-25;
+}
+
+.js-like-button__like--active,
+.js-like-button__number--active {
+	color: $purple;
+}

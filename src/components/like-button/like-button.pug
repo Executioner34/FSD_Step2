@@ -1,0 +1,16 @@
+mixin likeButton(options)
+	-
+		var btnClassName = "like-button__button"
+		btnClassName += options.isActive ? " js-like-button__button--active" : ""
+		var likeClassName = "like-button__like"
+		likeClassName += options.isActive ? " js-like-button__like--active" : ""
+		var numberClassName = "like-button__number"
+		numberClassName += options.isActive ? " js-like-button__number--active" : ""
+	.like-button__wrapper
+		button(class=btnClassName type="button")
+			if (options.isActive)
+				span(class=likeClassName class="fa fa-heart" aria-hidden="true")
+			else
+				span(class=likeClassName class="fa fa-heart-o" aria-hidden="true")
+			span(class=numberClassName class="font-level-body")=options.number
+

@@ -3,12 +3,13 @@ include ../components/textForm/textForm
 include ../components/checkbox/checkbox
 include ../components/radio/radio
 include ../components/toggle/toggle
+include ../components/like-button/like-button
 
 doctype html
 html(lang="ru")
 	title Ui-kit
 	body
-		img.logo(src="./src/assets/images/logo/Group.svg", alt="logo")
+		img.logo(src=require("../assets/images/logo/defaultLogo.svg"), alt="logo")
 		.container-colors-and-types
 			ul.colors
 				+rectangle({class: 'rectangle__color--100', title: 'Dark Shade 100%', text: '#1F2041'})
@@ -19,7 +20,7 @@ html(lang="ru")
 				+rectangle({class: 'rectangle__color--purple', title: 'Purple', text: '#BC9CFF'})
 				+rectangle({class: 'rectangle__color--green', title: 'Green', text: '#6FCF97'})
 			include ../components/types/types.pug
-		img.logo(src="./src/assets/images/logo/Group.svg", alt="logo")
+		img.logo(src=require("../assets/images/logo/defaultLogo.svg"), alt="logo")
 		.container-form-elements
 			.text-forms
 				.field-forms
@@ -48,3 +49,9 @@ html(lang="ru")
 					span(class="toggle-buttons__title font-level-h3") Toggle
 					+toggle({text: "Получать спецпредложения", value: "offer", isActive: true})
 					+toggle({text: "Получать спецпредложения", value: "offer"})
+				.like-buttons
+					span(class="like-buttons__title font-level-h3") like button
+					.like-buttons__list
+						+likeButton({number: "2"})
+						+likeButton({number: "12", isActive: true})
+	script(src="main.js")
