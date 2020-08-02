@@ -10,6 +10,7 @@
 @import '../components/radio/radio';
 @import '../components/toggle/toggle';
 @import '../components/like-button/like-button';
+@import '../components/rate-button/rate-button';
 
 body {
 	background-color: #ffffff;
@@ -63,10 +64,10 @@ body {
 
 .checkboxs-buttons {
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 7px;
 	margin-bottom: 41px;
 	&__title {
-		margin-bottom: 7px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -86,5 +87,17 @@ body {
 	margin-bottom: 41px;
 	&__list {
 		display: flex;
+	}
+}
+
+.rate-buttons {
+	display: grid;
+	grid-gap: 16px;
+	margin-bottom: 41px;
+	&__list {
+	display: inline-flex;
+	}
+	.rate-button {
+		margin-right: 20px;
 	}
 }

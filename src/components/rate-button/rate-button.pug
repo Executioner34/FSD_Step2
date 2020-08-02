@@ -1,0 +1,11 @@
+mixin rating(stars)
+	-
+		var fullStar = 0
+		var pureStar = 5 - stars
+	.rate-button
+		while fullStar < stars
+			i(class="rate-button__star fa fa-star" aria-hidden="true")
+			- fullStar++;
+		while pureStar > 0
+			i(class="rate-button__star-border fa fa-star-o" aria-hidden="true")
+			- pureStar--;

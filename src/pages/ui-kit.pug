@@ -4,6 +4,7 @@ include ../components/checkbox/checkbox
 include ../components/radio/radio
 include ../components/toggle/toggle
 include ../components/like-button/like-button
+include ../components/rate-button/rate-button
 
 doctype html
 html(lang="ru")
@@ -54,4 +55,12 @@ html(lang="ru")
 					.like-buttons__list
 						+likeButton({number: "2"})
 						+likeButton({number: "12", isActive: true})
+				.rate-buttons
+					span(class="rate-buttons__title font-level-h3") rate button
+					.rate-buttons__list
+						+rating(4)
+						+rating(5)
+			.range-and-buttons
+				
+
 	script(src="main.js")
