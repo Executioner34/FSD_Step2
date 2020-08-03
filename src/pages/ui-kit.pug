@@ -5,6 +5,7 @@ include ../components/radio/radio
 include ../components/toggle/toggle
 include ../components/like-button/like-button
 include ../components/rate-button/rate-button
+include ../components/range-slider/range-slider
 
 doctype html
 html(lang="ru")
@@ -61,6 +62,6 @@ html(lang="ru")
 						+rating(4)
 						+rating(5)
 			.range-and-buttons
-				
+				+rangeSlider({title: 'Range Slider', count: '5 000₽ - 10 000₽', name: 'price', min: '5000', max: '10000', step: 1})
 
 	script(src="main.js")
