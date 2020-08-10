@@ -1,0 +1,16 @@
+.range-slider__title {
+	width: 266px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.range-slider .range-slider__slider {
+	width: 266px;
+	margin-top: 23px;
+	background-color: #ffffff;
+	border-color: $dark-25;
+}
+
+.ranghe-slider__count {
+	font-size: 12px;
+}

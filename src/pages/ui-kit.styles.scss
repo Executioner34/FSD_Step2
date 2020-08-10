@@ -11,6 +11,9 @@
 @import '../components/toggle/toggle';
 @import '../components/like-button/like-button';
 @import '../components/rate-button/rate-button';
+@import '../components/range-slider/range-slider';
+@import '../components/button/button';
+@import '../components/pagination/pagination';
 
 body {
 	background-color: #ffffff;
@@ -31,7 +34,7 @@ body {
 .container-form-elements {
 	display: grid;
 	margin-left: 140px;
-	grid-template-columns: 320px 320px;
+	grid-template-columns: 320px 320px 320px;
 	grid-column-gap: 126px;
 }
 
@@ -99,5 +102,31 @@ body {
 	}
 	.rate-button {
 		margin-right: 20px;
+	}
+}
+
+.range-and-buttons {
+	grid-gap: 16px;
+}
+
+.buttons {
+	margin-top: 44px;
+}
+
+.buttons__list {
+	max-width: 320px;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+	grid-template-columns: min-content min-content;
+	margin-top: 16px;
+	margin-bottom: 30px;
+}
+
+.pagination {
+	margin-top: 40px;
+	display: grid;
+	&__title {
+		margin-bottom: 16px;
 	}
 }

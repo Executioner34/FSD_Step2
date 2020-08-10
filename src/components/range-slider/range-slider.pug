@@ -1,5 +1,6 @@
 mixin rangeSlider(options)
 	.range-slider
-		label(class='range-slider__label font-level-h3' for=options.name)=options.title
-		span(class='ranghe-slider__count font-level-body')=options.count
+		.range-slider__title
+			label(class='range-slider__label font-level-h3' for=options.name)=options.title
+			span(class='ranghe-slider__count font-level-body')=options.count
 		input(class='range-slider__slider' type='range' id=options.name name=options.name min=options.min max=options.max step=options.step)

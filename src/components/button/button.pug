@@ -1,0 +1,18 @@
+mixin button(options)
+	-
+		let btnClassName = 'button__button'
+		btnClassName += options.backgroundGradient ? ' button__button--bg-gradient' : ''
+		btnClassName += options.hidden ? ' button__button--hidden' : ''
+		btnClassName += options.borderGradient ? ' button__button--border-gradient' : ''
+		btnClassName += options.bigSize ? ' button__button--big-size' : ''
+		let textClassName = 'button__text'
+		textClassName += options.borderGradient ? ' button__text--border-gradient' : ''
+		textClassName += options.hidden ? ' button__text--hidden' : ''
+		textClassName += options.textPurple ? ' button__text--purple' : ''
+		textClassName += options.textGrey ? ' button__text--grey' : ''
+	.button__wrapper
+		button(class=btnClassName type='button')
+			span(class=textClassName class='font-level-h3')=options.text
+			if (options.bigSize)
+				span(class="button__button--arrow-right fa fa-arrow-right" aria-hidden="true")
+

@@ -1,0 +1,32 @@
+.pagination__list {
+	display: inline-flex;
+	margin-bottom: 10px;
+}
+
+.pagination__link {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: $dark-50;
+	border-radius: 22px;
+	font-weight: normal;
+	&:active,
+	&:hover {
+		background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+		color: #ffffff;
+		font-weight: bold;
+	}
+}
+
+.pagination__link--arrow-right,
+.pagination__link--arrow-right:active,
+.pagination__link--arrow-right:hover {
+	background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+}
