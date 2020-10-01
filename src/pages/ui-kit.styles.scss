@@ -1,6 +1,7 @@
 @import 'reset-css';
 @import '~normalize.css';
 @import '../assets/fonts/font-awesome-4.7.0/scss/font-awesome.scss';
+@import '../assets/fonts/iconfont/material-icons.css';
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/fonts';
 @import '../components/colors/colors';
@@ -14,9 +15,11 @@
 @import '../components/range-slider/range-slider';
 @import '../components/button/button';
 @import '../components/pagination/pagination';
+@import '../components/dropdown/dropdown';
 
 body {
 	background-color: #ffffff;
+	max-width: 1440px;
 }
 
 .logo {
@@ -129,4 +132,8 @@ body {
 	&__title {
 		margin-bottom: 16px;
 	}
+}
+
+.dropdown-item-1 {
+	margin-top: 20px;
 }

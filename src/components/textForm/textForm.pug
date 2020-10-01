@@ -4,11 +4,11 @@ mixin inputTextForm(options)
 	-
 		var inputClassName = "input"
 		inputClassName += options.isFocus ? " input--active" : ""
-		inputClassName += options.isDropdown ? " input-dropdown" : ""
+		inputClassName += options.isDropdown ? " dropdown-input material-icons" : ""
 		inputClassName += options.isButton ? " input-button" : ""
-		inputClassName += options.isDateDropdown ? " input-date-dropdown" : ""
-		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown" : ""
-		inputClassName += options.isSubscribe ? " input-subscribe" : ""
+		inputClassName += options.isDateDropdown ? " input-date-dropdown material-icons" : ""
+		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown material-icons" : ""
+		inputClassName += options.isSubscribe ? " input-subscribe material-icons" : ""
 	.text-form
 		+HeaderTextForm({title: options.title, text: options.text})
 		input(class=inputClassName type=options.type placeholder=options.placeholder)

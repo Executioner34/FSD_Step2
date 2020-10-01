@@ -1,5 +1,5 @@
 const path = require('path');
-const { LoaderOptionsPlugin } = require('webpack');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -17,6 +17,9 @@ module.exports = {
 		filename: '[name].js',
 		path: PATHS.build,
 	},
+	devServer: {
+		port: 9000,
+	},
 
 	// module - настройка для обработки дополнительных модулей проекта.
 	module: {
@@ -32,17 +35,18 @@ module.exports = {
 			//css
 			{
 				test: /\.css$/,
-				use: [{
-					loader: MiniCssExtractPlugin.loader
-				}]
-			},
+				use: ["style-loader", MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: { sourceMap: true }
+					},
+				]},
 			//scss
 			{
 				test: /\.scss$/,
 				use: ["style-loader", MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
-						options: { sourceMap: true }
 					}, {
 						loader: 'sass-loader',
 						options: { sourceMap: true }
@@ -77,6 +81,11 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
+		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery' : 'jquery'
 		}),
 	],
 }

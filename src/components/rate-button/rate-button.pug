@@ -4,8 +4,8 @@ mixin rating(stars)
 		var pureStar = 5 - stars
 	.rate-button
 		while fullStar < stars
-			i(class="rate-button__star fa fa-star" aria-hidden="true")
+			i(class="rate-button__star material-icons") star
 			- fullStar++;
 		while pureStar > 0
-			i(class="rate-button__star-border fa fa-star-o" aria-hidden="true")
+			i(class="rate-button__star-border material-icons") star_border
 			- pureStar--;

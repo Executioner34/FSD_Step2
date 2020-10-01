@@ -1,6 +1,7 @@
 .text-form__header {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 5px;
 		.text-form__title {
 			align-self: flex-end;
 			margin: 0;
@@ -9,5 +10,6 @@
 			align-self: flex-end;
 			margin: 0;
 			text-transform: uppercase;
+			font-size: 12px;
 		}
 	}

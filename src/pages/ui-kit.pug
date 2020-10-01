@@ -8,6 +8,7 @@ include ../components/rate-button/rate-button
 include ../components/range-slider/range-slider
 include ../components/button/button
 include ../components/pagination/pagination
+include ../components/dropdown/dropdown.pug
 
 doctype html
 html(lang="ru")
@@ -78,4 +79,9 @@ html(lang="ru")
 				.pagination
 					span(class="pagination__title font-level-h3") pagination
 					+pagination(['1', '2', '3', '...', '15'])
-	script(src="main.js")
+			.dropdown-item-1
+				+dropdown({title: 'Dropdown', text: 'Default'})
+			.dropdown-item-2
+				+dropdown({title: 'Dropdown', text: 'expanded'})
+			.dropdown-item-3
+				+dropdown({title: 'Dropdown', isGuets: true})

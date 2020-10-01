@@ -1,0 +1,38 @@
+.dropdown {
+	width: 266px;
+	.menu-open {
+		border-color: $dark-50;
+	}
+	.iqdropdown-menu {
+		border: 1px solid $dark-50;
+		border-radius: 2px;
+		box-shadow: none;
+		height: 120px;
+	}
+	.input-dropdown {
+		@extend %font-montserrat-body;
+	}
+	.dropdown__item-controls {
+		width: 92px;
+		height: 15px;
+		display: inline-flex;
+		justify-content: space-around;
+		vertical-align: middle;
+	}
+}
+
+.iqdropdown .iqdropdown-menu-option {
+	justify-content: space-between;
+	height: 30px;
+	margin-bottom: 11px; //Временный отступ
+	.button-decrement,
+	.button-increment {
+		width: 30px;
+		height: 30px;
+		border-radius: 22px;
+		border: 1px solid $dark-50;
+	}
+	.dropdown__value {
+		@extend %font-montserrat-h3;
+	}
+}

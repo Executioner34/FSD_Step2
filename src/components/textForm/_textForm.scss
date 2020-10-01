@@ -17,8 +17,7 @@
 	height: 44px;
 	@extend %font-montserrat-body;
 	outline: none;
-	padding: 10px 0 8px 15px;
-	margin-top: 5px;
+	padding: 10px 10px 8px 15px;
 	&::placeholder {
 		color: $dark-25;
 	}
@@ -35,7 +34,7 @@
 	}
 }
 
-.text-form .input-dropdown::placeholder {
+.text-form .dropdown-input::placeholder {
 	color: $dark-75;
 }
 
@@ -54,5 +53,24 @@
 }
 
 .text-form .input-subscribe {
+	position: relative;
 	width: 266px;
+	&::before {
+		content: "f054";
+		position: absolute;
+		display: block;
+		width: 44px;
+		height: 44px;
+		color: $purple;
+		font-family: "Material Icons";
+		font-size: 24px;
+		top: 10px;
+		left: 120px;
+	}
+}
+
+.dropdown-input::after,
+.input-date-dropdown::after,
+.input-filter-date-dropdown::after {
+	content: "expand_more";
 }
