@@ -16,6 +16,7 @@
 @import '../components/button/button';
 @import '../components/pagination/pagination';
 @import '../components/dropdown/dropdown';
+@import '../components/checkbox-list/checkbox-list';
 
 body {
 	background-color: #ffffff;
@@ -38,6 +39,8 @@ body {
 	display: grid;
 	margin-left: 140px;
 	grid-template-columns: 320px 320px 320px;
+	grid-template-rows: auto auto auto;
+	grid-row-gap: 100px;
 	grid-column-gap: 126px;
 }
 
@@ -135,5 +138,16 @@ body {
 }
 
 .dropdown-item-1 {
-	margin-top: 20px;
+	.dropdown {
+		margin-bottom: 20px;
+	}
+}
+
+.checkbox-rich-buttons {
+	display: grid;
+	grid-row-gap: 10px;
+	margin-bottom: 102px;
+	&__title {
+		margin-bottom: 6px;
+	}
 }

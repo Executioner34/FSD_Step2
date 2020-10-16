@@ -2,21 +2,27 @@ include ../textForm/_textForm-header/textForm-header
 include ../button/button
 
 mixin dropdown(options)
-	div(class='dropdown')
+	-
+		let dropdownClassName = 'dropdown'
+		dropdownClassName += options.isGuests ? ' dropdown-guests' : ''
+		let dropdownMenuClassName = 'iqdropdown-menu'
+		dropdownMenuClassName += options.isGuests ? ' dropdown__menu-guests' : ''
+	div(class=dropdownClassName)
 		+HeaderTextForm({title: options.title, text: options.text})
 		div(class='dropdown__wrapper iqdropdown')
 			p(class='input-dropdown iqdropdown-selection')
-			div(class="iqdropdown-menu")
-				// Проработать логику добавления дропдауна. Размеры разные, кнопки не помещаются
-				if (options.isGuets)
+			div(class=dropdownMenuClassName)
+				// Проработать логику добавления дропдауна. Размеры разные, кнопки не помещаются.
+				if (options.isGuests)
 					div(class="iqdropdown-menu-option" data-id="item1" data-defaultcount="0" data-mincount="0")
 						p(class="font-level-h3 iqdropdown-item") взрослые
 					div(class="iqdropdown-menu-option" data-id="item2" data-defaultcount="0" data-mincount="0")
 						p(class="font-level-h3 iqdropdown-item") дети
 					div(class="iqdropdown-menu-option" data-id="item3" data-mincount="0")
 						p(class="font-level-h3 iqdropdown-item") младенцы
-					+button({text: 'очистить', textGrey: true, })
-					+button({text: 'применить', textPurple: true, })
+					.dropdown__buttons
+						+button({text: 'очистить', textPurple: true, })
+						+button({text: 'применить', textPurple: true, })
 				else
 					div(class="iqdropdown-menu-option" data-id="item1" data-defaultcount="2" data-mincount="0")
 						p(class="font-level-h3 iqdropdown-item") Спальни

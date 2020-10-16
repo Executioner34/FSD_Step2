@@ -2,7 +2,7 @@
 .checkbox-button__label {
 	column-gap: 10px;
 	display: grid;
-	grid-template-columns: min-content 215px;
+	grid-template-columns: min-content 260px;
 }
 
 .checkbox-button__input {
@@ -37,4 +37,15 @@
 	font-size: 14px;
 	line-height: 18px;
 	color: $dark-50;
+}
+
+.checkbox-button__body {
+	display: flex;
+	flex-direction: column;
+	.checkbox-button__title {
+		padding-top: 2px;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+	}
 }

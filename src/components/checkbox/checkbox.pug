@@ -1,13 +1,18 @@
 mixin checkbox(options)
 	-
-		var checkboxClassName = "checkbox-button__input"
-		checkboxClassName += options.isActive ? " checkbox--active" : ""
-		checkboxClassName += options.isRich ? " checkbox-rich" : ""
+		var inputCheckboxClassName = "checkbox-button__input"
+		inputCheckboxClassName += options.isActive ? " checkbox--active" : ""
+		inputCheckboxClassName += options.isRich ? " checkbox-rich" : ""
 	.checkbox-button
 		label(class="checkbox-button__label")
 			if (options.isActive)
-				input(class=checkboxClassName type="checkbox" value=options.value checked )
+				input(class=inputCheckboxClassName type="checkbox" value=options.value checked )
 			else
-				input(class=checkboxClassName type="checkbox" value=options.value)
+				input(class=inputCheckboxClassName type="checkbox" value=options.value)
 			span(class="checkbox-button__fake")
-			span(class="checkbox-button__text font-level-body")=options.text
+			if (options.isRich)
+				.checkbox-button__body
+					span(class="checkbox-button__title font-level-body")=options.title
+					span(class="checkbox-button__text font-level-body")=options.text
+			else 
+				span(class="checkbox-button__text font-level-body")=options.text

@@ -9,6 +9,9 @@
 		box-shadow: none;
 		height: 120px;
 	}
+	.dropdown__menu-guests {
+		height: 160px;
+	}
 	.input-dropdown {
 		@extend %font-montserrat-body;
 	}
@@ -19,6 +22,10 @@
 		justify-content: space-around;
 		vertical-align: middle;
 	}
+}
+
+.dropdown-guests {
+	width: 320px;
 }
 
 .iqdropdown .iqdropdown-menu-option {
@@ -35,4 +42,10 @@
 	.dropdown__value {
 		@extend %font-montserrat-h3;
 	}
+}
+
+.dropdown__buttons {
+	display: flex;
+	width: auto;
+	justify-content: space-around;
 }
