@@ -10,6 +10,7 @@ include ../components/button/button
 include ../components/pagination/pagination
 include ../components/dropdown/dropdown
 include ../components/checkbox-list/checkbox-list
+include ../components/bullet-list/bullet-list
 
 doctype html
 html(lang="ru")
@@ -93,3 +94,6 @@ html(lang="ru")
 				span(class="checkbox-rich-buttons__title font-level-h3") rich Checkbox Buttons
 				+checkbox({title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', isRich: true})
 				+checkbox({title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.', isRich: true})
+			.bullet-list
+				span(class="bullet-list__title font-level-h3") bullet list
+				+bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])

@@ -37,6 +37,11 @@
 	font-size: 14px;
 	line-height: 18px;
 	color: $dark-50;
+	&-small {
+		margin-top: 5px;
+		font-size: 12px;
+		line-height: 14px;
+	}
 }
 
 .checkbox-button__body {

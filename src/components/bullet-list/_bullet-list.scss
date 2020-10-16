@@ -1,0 +1,8 @@
+.list {
+	list-style-image: url('../components/bullet-list/style-point/style-point.svg');
+	list-style-position: inside;
+	&__item {
+		margin-bottom: 10px;
+		line-height: 24px;
+	}
+}

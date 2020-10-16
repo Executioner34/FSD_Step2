@@ -17,6 +17,7 @@
 @import '../components/pagination/pagination';
 @import '../components/dropdown/dropdown';
 @import '../components/checkbox-list/checkbox-list';
+@import '../components/bullet-list/bullet-list';
 
 body {
 	background-color: #ffffff;
@@ -149,5 +150,13 @@ body {
 	margin-bottom: 102px;
 	&__title {
 		margin-bottom: 6px;
+	}
+}
+
+.bullet-list {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin-bottom: 16px;
 	}
 }
