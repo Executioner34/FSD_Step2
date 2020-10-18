@@ -1,0 +1,14 @@
+include ../like-button/like-button
+
+mixin userComment(options)
+	.user-comment
+		.user-comment__wrapper
+			.user
+				div(class='user__avatar')
+				.user__body
+					span(class='user__name font-level-body')=options.userName
+					span(class='user__text font-level-body')=options.userText
+			.comment
+				.comment__button
+					+likeButton({isActive: options.likeIsActive, number: options.likeNumber})
+				span(class='comment__text font-level-body')=options.commentText

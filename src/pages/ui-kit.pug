@@ -11,6 +11,8 @@ include ../components/pagination/pagination
 include ../components/dropdown/dropdown
 include ../components/checkbox-list/checkbox-list
 include ../components/bullet-list/bullet-list
+include ../components/info-hotel-number/info-hotel-number
+include ../components/user-comment/user-comment
 
 doctype html
 html(lang="ru")
@@ -97,3 +99,8 @@ html(lang="ru")
 			.bullet-list
 				span(class="bullet-list__title font-level-h3") bullet list
 				+bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+			.grid-template-10
+				+infoHotelNumb({img: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
+				+infoHotelNumb({img: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
+			.grid-template-11
+				+userComment({userName: 'Мурад Сарафанов', userText: '5 дней назад', likeIsActive: true, likeNumber: '12', commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})

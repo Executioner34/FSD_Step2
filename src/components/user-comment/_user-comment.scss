@@ -1,0 +1,42 @@
+.user-comment__wrapper {
+	width: 710px;
+	display: flex;
+	flex-direction: column;
+}
+
+.user {
+	display: flex;
+	justify-content: flex-start;
+	&__avatar {
+		width: 48px;
+		height: 48px;
+		background: url('../components/user-comment/avatar/murad-sarafanov.svg') no-repeat 50% 30%;
+		box-sizing: border-box;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 10px;
+	}
+	&__name {
+		line-height: 24px;
+		font-weight: bold;
+	}
+	&__text {
+		line-height: 24px;
+	}
+}
+
+.comment {
+	margin-top: 13px;
+	display: inline-flex;
+	&__button {//надо отцентрировать кнопку
+		width: 48px;
+		margin-top: 3px;
+		margin-right: 10px;
+	}
+	&__text {
+		line-height: 24px;
+	}
+}

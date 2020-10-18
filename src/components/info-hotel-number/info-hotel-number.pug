@@ -1,0 +1,8 @@
+mixin infoHotelNumb (options)
+	.info-hotel-number
+		.info-hotel-number__wrapper
+			span(class='info-hotel-number__img material-icons')=options.img
+			.info-hotel-number__body
+				span(class='info-hotel-number__title font-level-body')=options.title
+				span(class='info-hotel-number__text font-level-body')=options.text
+		hr(class='info-hotel-number__border-line')

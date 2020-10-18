@@ -1,0 +1,36 @@
+.info-hotel-number {
+	max-width: 280px;
+}
+
+.info-hotel-number__wrapper {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 17px;
+}
+
+.info-hotel-number__img {
+	font-size: 48px;
+	background: $primary-gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.info-hotel-number__body {
+	display: flex;
+	flex-direction: column;
+	height: 48px;
+	justify-content: center;
+	margin-left: 10px;
+	.info-hotel-number__title {
+		font-weight: bold;
+		line-height: 24px;
+	};
+	.info-hotel-number__title {
+		line-height: 24px;
+	}
+}
+
+.info-hotel-number__border-line {
+	border: 1px solid rgba(31, 32, 65, 0.1);
+	margin: auto;
+}

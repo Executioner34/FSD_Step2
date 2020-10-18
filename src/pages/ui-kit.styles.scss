@@ -18,6 +18,8 @@
 @import '../components/dropdown/dropdown';
 @import '../components/checkbox-list/checkbox-list';
 @import '../components/bullet-list/bullet-list';
+@import '../components/info-hotel-number/info-hotel-number';
+@import '../components/user-comment/user-comment';
 
 body {
 	background-color: #ffffff;
@@ -34,13 +36,14 @@ body {
 	grid-template-rows: 610px;
 	grid-template-columns: 270px 403px;
 	grid-gap: 427px;
+	margin-bottom: 145px;
 }
 
 .container-form-elements {
 	display: grid;
 	margin-left: 140px;
 	grid-template-columns: 320px 320px 320px;
-	grid-template-rows: auto auto auto;
+	grid-template-rows: auto auto auto auto;
 	grid-row-gap: 100px;
 	grid-column-gap: 126px;
 }
@@ -159,4 +162,10 @@ body {
 	&__title {
 		margin-bottom: 16px;
 	}
+}
+
+.grid-template-10 {
+	display: grid;
+	grid-row-gap: 20px;
+	margin-bottom: 131px;
 }

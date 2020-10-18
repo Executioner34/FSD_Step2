@@ -45,6 +45,7 @@
 }
 
 .checkbox-button__body {
+	user-select: none;
 	display: flex;
 	flex-direction: column;
 	.checkbox-button__title {
