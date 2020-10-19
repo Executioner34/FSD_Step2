@@ -33,6 +33,8 @@
 	display: inline-flex;
 	&__button {//надо отцентрировать кнопку
 		width: 48px;
+		display: flex;
+		justify-content: center;
 		margin-top: 3px;
 		margin-right: 10px;
 	}

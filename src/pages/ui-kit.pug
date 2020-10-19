@@ -13,6 +13,7 @@ include ../components/checkbox-list/checkbox-list
 include ../components/bullet-list/bullet-list
 include ../components/info-hotel-number/info-hotel-number
 include ../components/user-comment/user-comment
+include ../components/date-picker/date-picker
 
 doctype html
 html(lang="ru")
@@ -104,3 +105,7 @@ html(lang="ru")
 				+infoHotelNumb({img: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
 			.grid-template-11
 				+userComment({userName: 'Мурад Сарафанов', userText: '5 дней назад', likeIsActive: true, likeNumber: '12', commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+		.container-cards
+			.card-date-picker
+				+datePicker({title: 'Найдём номера под ваши пожелания', titleDateDropdownIn: 'прибытие', titleDateDropdownOut: 'выезд', titleDropdown: 'гости', buttonText: 'подобрать номер'})
+
