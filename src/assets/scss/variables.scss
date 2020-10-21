@@ -47,6 +47,22 @@ $primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 	color: $dark-75;
 }
 
+%font-openSans-h1 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: $dark-100;
+}
+
+%font-openSans-h2 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.188rem;
+	color: $dark-100;
+}
+
 .font-level-h1 {
 	@extend %font-quicksand-h1;
 }
@@ -61,4 +77,12 @@ $primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 .font-level-body {
 	@extend %font-montserrat-body;
+}
+
+.font-level-h1-ciril {
+	@extend %font-openSans-h1;
+}
+
+.font-level-h1-ciril {
+	@extend %font-openSans-h2;
 }
