@@ -1,0 +1,68 @@
+.book-hotel-number {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	padding: 30px;
+	padding-top: 40px;
+	&__title {
+		display: inline-flex;
+		align-content: space-between;
+		align-items: baseline;
+		margin-bottom: 23px;
+	}
+	&__date-dropdown {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	&__dropdown {
+		margin-bottom: 20px;
+	}
+	&__price {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.title {
+	&__number-room {
+		margin-right: 5px;
+		&--large {
+			font-size: 14px;
+		}
+	}
+	&--luxure {
+		color: $purple;
+	}
+	&__price {
+		margin-left: 110px;
+		&--medium {
+			font-weight: bold;
+			color: $dark-50;
+		}
+		&--large {
+			color: $dark-50;
+		}
+	}
+}
+
+.price {
+	&__days,
+	&__discount,
+	&__service {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	&__total {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 0;
+		.total__border-line {
+			border: 1px dashed $dark-25;
+			margin: 0 5px;
+			flex-grow: 1;
+			align-self: flex-end;
+		}
+	}
+}

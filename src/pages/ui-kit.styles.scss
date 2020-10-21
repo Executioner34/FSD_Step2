@@ -21,6 +21,7 @@
 @import '../components/info-hotel-number/info-hotel-number';
 @import '../components/user-comment/user-comment';
 @import '../components/date-picker/date-picker';
+@import '../components/book-hotel-number/book-hotel-number';
 
 body {
 	background-color: #ffffff;
@@ -179,7 +180,4 @@ body .container-cards {
 	grid-template-rows: auto auto auto auto;
 	grid-row-gap: 40px;
 	grid-column-gap: 40px;
-	.card-date-picker {
-		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-	}
 }

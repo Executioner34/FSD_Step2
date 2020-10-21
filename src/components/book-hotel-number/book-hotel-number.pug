@@ -1,0 +1,36 @@
+include ../dropdown/dropdown
+include ../button/button
+include ../textForm/textForm
+
+mixin bookHotelNumb(options)
+	.book-hotel-number
+		.book-hotel-number__title
+			.title__number-room
+				span(class='title__number-room--large font-level-h1') №
+				span(class='title__number-room--medium font-level-h1')=options.number
+			span(class='title--luxure font-level-h3') люкс
+			.title__price
+				span(class='title__price--medium font-level-body')=options.price
+				span(class='title__price--large font-level-body') в сутки
+		.book-hotel-number__date-dropdown
+			+inputTextForm({title: 'прибытие', type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
+			+inputTextForm({title: 'выезд', type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
+		.book-hotel-number__dropdown
+			+dropdown({title: 'гости', isGuests: true})
+		.book-hotel-number__price
+			.price__days(class='font-level-body')
+				.days__text #{options.price}х 4 суток
+				.days__result 39 960₽
+			.price__discount(class='font-level-body')
+				.discount__text Сбор за услуги: скидка 2 179₽
+				.discount__result 0₽
+			.price__service(class='font-level-body')
+				.service__text Сбор за дополнительные услуги
+				.service__result 300₽
+			.price__total(class='font-level-h2-ciril')
+				.total__text Итого
+				hr(class='total__border-line')
+				.total__result 38 081₽
+		.book-hotel-number__button
+			+button({text: 'забронировать', bigSize: true})
+
