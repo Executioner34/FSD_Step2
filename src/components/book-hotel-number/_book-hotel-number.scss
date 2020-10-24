@@ -50,9 +50,10 @@
 	&__days,
 	&__discount,
 	&__service {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 214px 20px 1fr;
 		margin-bottom: 10px;
+		line-height: 18px;
 	}
 	&__total {
 		display: flex;
@@ -65,4 +66,24 @@
 			align-self: flex-end;
 		}
 	}
+}
+
+.discount__info,
+.service__info {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid $dark-25;
+	margin-left: 5px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	color: $dark-25
+}
+
+.days__result,
+.discount__result,
+.service__result {
+	text-align: right;
 }

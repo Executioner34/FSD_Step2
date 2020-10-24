@@ -20,12 +20,15 @@ mixin bookHotelNumb(options)
 		.book-hotel-number__price
 			.price__days(class='font-level-body')
 				.days__text #{options.price}х 4 суток
+				div
 				.days__result 39 960₽
 			.price__discount(class='font-level-body')
 				.discount__text Сбор за услуги: скидка 2 179₽
+				.discount__info i
 				.discount__result 0₽
 			.price__service(class='font-level-body')
 				.service__text Сбор за дополнительные услуги
+				.service__info i
 				.service__result 300₽
 			.price__total(class='font-level-h2-ciril')
 				.total__text Итого
