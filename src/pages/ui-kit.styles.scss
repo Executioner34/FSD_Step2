@@ -103,6 +103,9 @@ body {
 	&__list {
 		display: flex;
 	}
+	&__item {
+		margin-right: 10px;
+	}
 }
 
 .rate-buttons {

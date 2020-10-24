@@ -44,20 +44,24 @@
 		height: 44px;
 		border-radius: 22px;
 		background-image: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
+		padding: 14px 20px 15px;
+		position: relative;
 	};
 	&--arrow-right{
 		color: #FFFFFF;
 		font-size: 24px;
-		flex-basis: 1;
+		line-height: 24px;
 		font-weight: normal;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 
 .button__text {
 	color: #FFFFFF;
+	line-height: 15px;
 	&--purple {
 		color: $purple;
 	}

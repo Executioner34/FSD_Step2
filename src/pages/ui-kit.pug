@@ -62,9 +62,11 @@ html(lang="ru")
 					+toggle({text: "Получать спецпредложения", value: "offer"})
 				.like-buttons
 					span(class="like-buttons__title font-level-h3") like button
-					.like-buttons__list
-						+likeButton({number: "2"})
-						+likeButton({number: "12", isActive: true})
+					ul.like-buttons__list
+						li.like-buttons__item
+							+likeButton({number: "2"})
+						li.like-buttons__item
+							+likeButton({number: "12", isActive: true})
 				.rate-buttons
 					span(class="rate-buttons__title font-level-h3") rate button
 					.rate-buttons__list
