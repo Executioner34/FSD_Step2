@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { TRUE } = require('node-sass');
 const PATHS = {
 	source: path.join(__dirname, 'src'),
-	build: path.join(__dirname, 'dist')
+	build: path.join(__dirname, 'docs')
 };
 
 // Экспорт модуля в node.js
