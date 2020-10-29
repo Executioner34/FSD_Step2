@@ -36,10 +36,10 @@
 	}
 	&__button-login {
 		box-sizing: border-box;
-		display: inline-flex;
+		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		.login__text {
-			margin-right: 34px;
 			color: #000000;
 			line-height: 18px;
 		}

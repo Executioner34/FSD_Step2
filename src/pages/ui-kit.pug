@@ -16,6 +16,7 @@ include ../components/user-comment/user-comment
 include ../components/date-picker/date-picker
 include ../components/book-hotel-number/book-hotel-number
 include ../components/registration-card/registration-card
+include ../components/signin-card/signin-card
 
 doctype html
 html(lang="ru")
@@ -118,3 +119,5 @@ html(lang="ru")
 				+inputTextForm({title: "date Dropdown", type: "text", placeholder: "19.08.2019", isDateDropdownActive: true})
 			.registration-card
 				+registrationCard()
+			.sign-in-card
+				+signIn()
