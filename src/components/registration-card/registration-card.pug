@@ -1,0 +1,31 @@
+include ../radio/radio
+include ../button/button
+include ../textForm/textForm
+include ../toggle/toggle
+
+mixin registrationCard(options)
+	.registration
+		.registration__title
+			span(class='title font-level-h1-ciril') Регистрация аккаунта
+		.registration__input-first-name
+			input(type='text' class='input' placeholder='Имя')
+		.registration__input-second-name
+			input(type='text' class='input' placeholder='Фамилия')
+		.registration__radio-buttons
+			+radio({text: "Мужчина", value: "male", isActive: true})
+			+radio({text: "Женщина", value: "female"})
+		.registration__birhday
+			+inputTextForm({title: 'дата рождения', type: "text", placeholder: "ДД.ММ.ГГГГ"})
+		.registration__login
+			+inputTextForm({title: "данные для входа в сервис", type: "email", placeholder: "Email"})
+			+inputTextForm({type: "password", placeholder: "Пароль"})
+			.login__toggle
+			+toggle({text: "Получать спецпредложения", value: "offer"})
+		.registration__button-pay
+			+button({text: 'перейти к оплате', bigSize: true})
+		.registration__button-login
+			span(class='login__text font-level-body') Уже есть аккаунт на Toxin
+			+button({text: 'войти', borderGradient: true, textPurple: true})
+
+
+

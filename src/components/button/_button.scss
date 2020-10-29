@@ -7,43 +7,30 @@
 	border-style: none;
 	outline: none;
 	&--bg-gradient {
-		width: 100px;
+		box-sizing: border-box;
+		width: 99px;
 		height: 44px;
 		border-radius: 22px;
-		background-image: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+		background-image: $primary-gradient;
 	};
 	&--hidden,
 	&:active {
 		opacity: 0.5;
 	};
 	&--border-gradient {
-		width: 96px;
-		height: 40px;
-		border-radius: 20px;
-		position: relative;
-		background-color: #FFFFFF;
-		outline: none;
-		border: none;
-		&:active {
-			opacity: 1;
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: -2px;
-			left: -2px;
-			background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-			width: 100px;
-			height: 44px;
-			border-radius: 22px;
-		}
+		width: 99px;
+		height: 44px;
+		border-radius: 22px;
+		border: 2px solid transparent;//Почитать информацию
+		background-image: $primary-gradient;
+		background-origin: border-box;
+		box-shadow: inset 0 50px #fff;
 	};
 	&--big-size {
 		width: 320px;
 		height: 44px;
 		border-radius: 22px;
-		background-image: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+		background-image: $primary-gradient;
 		padding: 14px 20px 15px;
 		position: relative;
 	};

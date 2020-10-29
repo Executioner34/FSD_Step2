@@ -15,6 +15,7 @@ include ../components/info-hotel-number/info-hotel-number
 include ../components/user-comment/user-comment
 include ../components/date-picker/date-picker
 include ../components/book-hotel-number/book-hotel-number
+include ../components/registration-card/registration-card
 
 doctype html
 html(lang="ru")
@@ -113,5 +114,7 @@ html(lang="ru")
 				+datePicker({title: 'Найдём номера под ваши пожелания', titleDateDropdownIn: 'прибытие', titleDateDropdownOut: 'выезд', titleDropdown: 'гости', buttonText: 'подобрать номер'})
 			.card-book-hotel-number
 				+bookHotelNumb({number: '888', price: '9 990₽ '})
-			.date-picker-active
+			.calendar
 				+inputTextForm({title: "date Dropdown", type: "text", placeholder: "19.08.2019", isDateDropdownActive: true})
+			.registration-card
+				+registrationCard()
