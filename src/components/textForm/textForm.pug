@@ -6,9 +6,15 @@ mixin inputTextForm(options)
 		inputClassName += options.isFocus ? " input--active" : ""
 		inputClassName += options.isDropdown ? " dropdown-input material-icons" : ""
 		inputClassName += options.isButton ? " input-button" : ""
-		inputClassName += options.isDateDropdown ? " input-date-dropdown material-icons" : ""
+		inputClassName += options.isDateDropdown ? " input-date-dropdown datepicker-here material-icons" : ""
 		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown material-icons" : ""
 		inputClassName += options.isSubscribe ? " input-subscribe material-icons" : ""
 	.text-form
-		+HeaderTextForm({title: options.title, text: options.text})
-		input(class=inputClassName type=options.type placeholder=options.placeholder)
+		if (options.isDateDropdownActive)
+			.datepicker-here(data-clear-button= "true" data-range="true" data-prev-html="<span>arrow_back</span>" data-next-html="<span>arrow_forward</span>")
+		else
+			+HeaderTextForm({title: options.title, text: options.text})
+			if (options.isDateDropdown)
+				input(class=inputClassName type=text placeholder=options.placeholder data-select-other-years= "false" data-clear-button= "true" data-prev-html="<span>arrow_back</span>" data-next-html="<span>arrow_forward</span>")
+			else
+				input(class=inputClassName type=options.type placeholder=options.placeholder)

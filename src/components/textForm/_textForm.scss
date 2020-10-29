@@ -68,9 +68,127 @@
 		left: 120px;
 	}
 }
+// стили для air datepicker
+.datepicker-here .datepicker,
+.datepicker {
+	width: 320px;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid $dark-25;
+	border-radius: 4px;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
 
-.dropdown-input::after,
-.input-date-dropdown::after,
-.input-filter-date-dropdown::after {
-	content: "expand_more";
+.datepicker--nav {
+	border-bottom: none;
+	padding: 0;
+	&-title,
+	&-title i {
+		font-family: OpenSans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 19px;
+		line-height: 24px;
+		color: $dark-100;
+	}
+}
+
+.datepicker--nav-action {
+	&:hover {
+		background: none;
+	}
+	span {
+		font-family: material icons;
+		width: 24px;
+		height: 24px;
+		font-size: 24px;
+		line-height: 20px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		background: $primary-gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.datepicker--cells-days {
+	&.-other-month- {
+		color: $dark-25;
+	}
+}
+
+.datepicker--content {
+	padding: 0;
+	margin-top: 30px;
+	&.datepicker--body {
+		width: 280px;
+	}
+}
+
+.datepicker--days-names {
+	margin: 0;
+}
+
+.datepicker--day-name {
+	width: 40px;
+	height: 40px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	color: $purple;
+}
+
+.datepicker--cell {
+	height: 40px;
+	&.-current- {
+		background: $secondary-gradient;
+		border-radius: 22px;
+		color: #fff;
+	}
+	&.-selected- {
+		background: $primary-gradient;
+		border-radius: 22px;
+		color: #fff;
+		&.-current- {
+			background: $primary-gradient;
+		}
+		&:hover {
+			background: $primary-gradient;
+		}
+	}
+	&.-in-range- {
+		background: $primary-gradient;
+		opacity: 0.25;
+	}
+}
+
+.datepicker--cell-day {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	color: $dark-50;
+}
+
+.datepicker--buttons {
+	border-top: none;
+	padding: 0;
+	margin-top: 20px;
+	display: block;
+	.datepicker--button {
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: $purple;
+		&:hover {
+			background: none;
+		}
+	}
 }

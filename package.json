@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "ion-rangeslider": "^2.3.1",
     "item-quantity-dropdown": "^2.1.0",
     "material-design-icons": "^3.0.1",
