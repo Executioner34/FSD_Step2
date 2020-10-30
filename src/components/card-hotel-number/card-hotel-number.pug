@@ -1,0 +1,35 @@
+include ../rate-button/rate-button
+
+mixin cardHotelNumb(options)
+	.card-hotel-number
+		.card-hotel-number__gallery
+			img(class='card-hotel-number__image ' src=require("../components/card-hotel-number/gallery/" + options.src +".png") alt=options.src)
+			if (options.isArrows)
+				.card-hotel-number__arrows
+					div(class='card-hotel-number__arrow-prev')
+						i(class='arrow__prev material-icons') expand_more
+					div(class='card-hotel-number__arrow-next')
+						i(class='arrow__next material-icons') expand_more
+			ul.card-hotel-number__list-points
+				li(class='card-hotel-number__point point--fill')
+				li(class='card-hotel-number__point')
+				li(class='card-hotel-number__point')
+				li(class='card-hotel-number__point')
+		.card-hotel-number__information
+			.card-hotel-number__title
+				.title__number-room
+					span(class='title__number-room--large font-level-h1-ciril') №
+					span(class='title__number-room--medium font-level-h1')=options.number
+					if (options.isLux)
+						span(class='title__number-room--luxure font-level-h3') люкс
+				.title__price
+					span(class='title__price--medium font-level-body')=options.price
+					span(class='title__price--large font-level-body') в сутки
+			.card-hotel-number__rating
+				+rating(options.star)
+				.rating__reviews
+					span(class='reviews--medium font-level-body')=options.reviews
+					span(class='reviews--large font-level-body') Отзывов
+
+
+

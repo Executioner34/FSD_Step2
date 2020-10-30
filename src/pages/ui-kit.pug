@@ -17,6 +17,7 @@ include ../components/date-picker/date-picker
 include ../components/book-hotel-number/book-hotel-number
 include ../components/registration-card/registration-card
 include ../components/signin-card/signin-card
+include ../components/card-hotel-number/card-hotel-number
 
 doctype html
 html(lang="ru")
@@ -121,3 +122,7 @@ html(lang="ru")
 				+registrationCard()
 			.sign-in-card
 				+signIn()
+			.card-number-hotel
+				+cardHotelNumb({src: '№888', number: '888', isArrows: true, price: '9 990₽ ', isLux: true, reviews: '145 ', star: '5'})
+			.card-number-hotel
+				+cardHotelNumb({src: '№840', number: '840', price: '9 990₽ ', reviews: '65 ', star: '4'})

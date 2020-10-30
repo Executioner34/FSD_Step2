@@ -24,6 +24,7 @@
 @import '../components/book-hotel-number/book-hotel-number';
 @import '../components/registration-card/registration-card';
 @import '../components/signin-card/signin-card';
+@import '../components/card-hotel-number/card-hotel-number';
 
 body {
 	background-color: #ffffff;
@@ -182,7 +183,6 @@ body .container-cards {
 	padding-left: 140px;
 	display: grid;
 	grid-template-columns: 380px 380px 320px;
-	grid-template-rows: auto auto auto auto;
 	grid-row-gap: 40px;
 	grid-column-gap: 40px;
 }
