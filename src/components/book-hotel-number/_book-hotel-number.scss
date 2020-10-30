@@ -4,9 +4,10 @@
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	padding: 30px;
 	padding-top: 40px;
+	display: block;
 	&__title {
-		display: inline-flex;
-		align-content: space-between;
+		display: flex;
+		justify-content: space-between;
 		align-items: baseline;
 		margin-bottom: 23px;
 	}
@@ -26,16 +27,16 @@
 
 .title {
 	&__number-room {
-		margin-right: 5px;
 		&--large {
 			font-size: 14px;
+			padding-right: 5px;
 		}
+		&--luxure {
+			padding-left: 5px;
+			color: $purple;
 	}
-	&--luxure {
-		color: $purple;
 	}
 	&__price {
-		margin-left: 110px;
 		&--medium {
 			font-weight: bold;
 			color: $dark-50;
@@ -79,7 +80,7 @@
 	text-align: center;
 	vertical-align: middle;
 	font-weight: bold;
-	color: $dark-25
+	color: $dark-25;
 }
 
 .days__result,
