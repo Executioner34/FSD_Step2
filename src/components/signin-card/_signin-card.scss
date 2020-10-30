@@ -1,0 +1,30 @@
+.sign-in {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	padding: 40px 30px 32px;
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__input-email {
+		margin-bottom: 5px;
+	}
+	&__input-password {
+		margin-bottom: 20px;
+	}
+	&__button-signin {
+		margin-bottom: 30px;
+	}
+	&__button-create {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.create__text {
+			color: #000000;
+			line-height: 18px;
+		}
+	}
+}

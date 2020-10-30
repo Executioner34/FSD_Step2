@@ -1,0 +1,16 @@
+include ../button/button
+include ../textForm/textForm
+
+mixin signIn(options)
+	.sign-in
+		.sign-in__title
+			span(class='title__text font-level-h1-ciril') Войти
+		.sign-in__input-email
+			+inputTextForm({type: "email", placeholder: "Email"})
+		.sign-in__input-password
+			+inputTextForm({type: "password", placeholder: "Пароль"})
+		.sign-in__button-signin
+			+button({text: 'войти', bigSize: true})
+		.sign-in__button-create
+			span(class='create__text font-level-body') Нет аккаунта на Toxin?
+			+button({text: 'создать', borderGradient: true, textPurple: true})
