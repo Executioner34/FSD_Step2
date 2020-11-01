@@ -1,0 +1,25 @@
+include ../button/button
+include ./__link/link
+
+mixin header(options)
+	header.header
+		.header__logo
+			img(class='header__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+		nav.header__nav
+			ul(class='header__list')
+				+link({name: 'О нас', isBold: true})
+				+link({name: 'Услуги', isExpand: true})
+				+link({name: 'Вакансии'})
+				+link({name: 'Новости'})
+				+link({name: 'Соглашения', isExpand: true})
+		if (options.isLogin)
+			.header__buttons
+				.button__login
+					+button({borderGradient: true, textPurple: true, text: 'войти'})
+				.button__registration
+					+button({backgroundGradient: true, text: 'зарегистрироваться'})
+		else
+			.header__vertical-line
+			.header__user
+				span(class='header__name font-level-body')= options.userName
+

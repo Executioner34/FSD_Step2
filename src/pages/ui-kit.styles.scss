@@ -25,6 +25,7 @@
 @import '../components/registration-card/registration-card';
 @import '../components/signin-card/signin-card';
 @import '../components/card-hotel-number/card-hotel-number';
+@import '../components/header/header';
 
 body {
 	background-color: #ffffff;
@@ -180,9 +181,17 @@ body {
 
 body .container-cards {
 	background: #F4F4F6;
-	padding-left: 140px;
+	padding: 150px 140px 140px;
 	display: grid;
 	grid-template-columns: 380px 380px 320px;
 	grid-row-gap: 40px;
 	grid-column-gap: 40px;
+}
+
+body .container-headers-and-footers {
+	background: #E5E5E5;
+	padding: 140px 0;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-gap: 40px;
 }

@@ -1,0 +1,8 @@
+mixin link(options)
+	-
+		let linkClassName = 'list__link font-level-body'
+		linkClassName += options.isBold ? ' list__link--bold' : ''
+	li
+		a(href='#' class=linkClassName)= options.name
+			if (options.isExpand)
+				i(class='link--expand material-icons') expand_more

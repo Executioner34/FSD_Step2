@@ -1,3 +1,7 @@
+.button__wrapper {
+	min-width: 99px;
+	height: 44px;
+}
 .button__button {
 	box-sizing: border-box;
 	padding: 0 0;
@@ -8,8 +12,8 @@
 	outline: none;
 	&--bg-gradient {
 		box-sizing: border-box;
-		width: 99px;
-		height: 44px;
+		width: 100%;
+		height: 100%;
 		border-radius: 22px;
 		background-image: $primary-gradient;
 	};
@@ -18,8 +22,8 @@
 		opacity: 0.5;
 	};
 	&--border-gradient {
-		width: 99px;
-		height: 44px;
+		width: 100%;
+		height: 100%;
 		border-radius: 22px;
 		border: 2px solid transparent;//Почитать информацию
 		background-image: $primary-gradient;
@@ -28,10 +32,10 @@
 	};
 	&--big-size {
 		width: 320px;
-		height: 44px;
+		height: 100%;
 		border-radius: 22px;
 		background-image: $primary-gradient;
-		padding: 14px 20px 15px;
+		text-align: center;
 		position: relative;
 	};
 	&--arrow-right{
