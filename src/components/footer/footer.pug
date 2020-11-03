@@ -1,0 +1,48 @@
+include ../textForm/textForm
+
+mixin footer(options)
+	-
+		var footerClassName = 'footer'
+		footerClassName += options.isMobile ? ' footer--mobile' : ''
+	footer(class= footerClassName)
+		if (options.isMobile)
+			.footer__logo
+				img(class='footer__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+			span(class='footer__copyright font-level-body') Copyright © 2018 Toxin отель. Все права зачищены.
+			.footer__social-icons
+				each icon in ['twitter','facebook-square','instagram']
+						a(class='social-icons__link' href='#')
+							i(class='social-icon fab fa-' + icon)
+		else
+			.footer__header
+				.footer__information
+						img(class='footer__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+						span(class='footer__text font-level-body') Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+				.footer__navigation
+					ul(class='footer__list footer__title font-level-h3') навигация
+						each name in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+							li
+								a(class='list__link font-level-body' href='#')= name
+				.footer__about
+					ul(class='footer__list footer__title font-level-h3') о нас
+						each name in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+							li
+								a(class='list__link font-level-body' href='#')= name
+				.footer__support
+					ul(class='footer__list footer__title font-level-h3') Служба поддержки
+						each name in ['Соглашения', 'Сообщества', 'Связь с нами']
+							li
+								a(class='list__link font-level-body' href='#')= name
+				.footer__subscribe
+					ul(class='footer__list footer__title font-level-h3') Подписка
+						li
+							span(class='subscribe__text font-level-body') Получайте специальные предложения и новости сервиса
+						li
+							+inputTextForm({type: "email", placeholder: "Email"})
+			.footer__footer
+				span(class='footer__copyright font-level-body') Copyright © 2018 Toxin отель. Все права зачищены.
+				.footer__social-icons
+					each icon in ['twitter','facebook-square','instagram']
+						a(class='social-icons__link' href='#')
+							i(class='social-icon fab fa-' + icon)
+

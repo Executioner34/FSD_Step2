@@ -1,9 +1,7 @@
 @import 'reset-css';
 @import '~normalize.css';
-@import '../assets/fonts/font-awesome-4.7.0/scss/font-awesome.scss';
-@import '../assets/fonts/iconfont/material-icons.css';
-@import '../assets/scss/variables.scss';
 @import '../assets/scss/fonts';
+@import '../assets/scss/variables.scss';
 @import '../components/colors/colors';
 @import '../components/types/types';
 @import '../components/textForm/textForm';
@@ -26,6 +24,7 @@
 @import '../components/signin-card/signin-card';
 @import '../components/card-hotel-number/card-hotel-number';
 @import '../components/header/header';
+@import '../components/footer/footer';
 
 body {
 	background-color: #ffffff;
@@ -183,7 +182,7 @@ body .container-cards {
 	background: #F4F4F6;
 	padding: 150px 140px 140px;
 	display: grid;
-	grid-template-columns: 380px 380px 320px;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 	grid-row-gap: 40px;
 	grid-column-gap: 40px;
 }
@@ -194,4 +193,7 @@ body .container-headers-and-footers {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-gap: 40px;
+	.footer-mobile {
+		padding: 0 336px;
+	}
 }

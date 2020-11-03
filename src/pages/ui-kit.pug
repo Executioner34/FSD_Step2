@@ -19,6 +19,7 @@ include ../components/registration-card/registration-card
 include ../components/signin-card/signin-card
 include ../components/card-hotel-number/card-hotel-number
 include ../components/header/header
+include ../components/footer/footer
 
 doctype html
 html(lang="ru")
@@ -128,8 +129,12 @@ html(lang="ru")
 			.card-number-hotel
 				+cardHotelNumb({src: '№840', number: '840', price: '9 990₽ ', reviews: '65 ', star: '4'})
 		.container-headers-and-footers
-			.header__login
+			.header-login
 				+header({isLogin: true})
-			.header__user
+			.header-user
 				+header({userName: 'Юлий Цезарь'})
+			.footer-desktop
+				+footer({})
+			.footer-mobile
+				+footer({isMobile: true})
 
