@@ -21,6 +21,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+		visibility: hidden;
 		.card-hotel-number__arrow-prev,
 		.card-hotel-number__arrow-next {
 			background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
@@ -108,4 +109,8 @@
 			color: $dark-50;
 		}
 	}
+}
+
+.card-hotel-number__arrows:focus {
+	visibility: visible;
 }

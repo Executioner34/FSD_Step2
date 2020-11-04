@@ -2,7 +2,7 @@
   "name": "fsd_step_2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "landing.js",
   "scripts": {
     "dev": "webpack-dev-server --open --mode=development",
     "build": "webpack --mode production"

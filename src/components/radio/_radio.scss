@@ -22,7 +22,7 @@
 
 .radio-button__input:checked + .radio-button__text::before {
 	opacity: 1;
-	background: url("../components/radio/radio-icon/radio-icon.svg") no-repeat;
+	background: url("../../components/radio/radio-icon/radio-icon.svg") no-repeat;
 	background-position: 3px 3px;
 	background-size: 12px;
 	border-color: $purple;

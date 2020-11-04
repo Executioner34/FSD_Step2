@@ -4,7 +4,7 @@ include ./__link/link
 mixin header(options)
 	header.header
 		.header__logo
-			img(class='header__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+			img(class='header__img' src=require('../../assets/images/logo/mainLogo.svg') alt='main logo')
 		nav.header__nav
 			ul(class='header__list')
 				+link({name: 'О нас', isBold: true})

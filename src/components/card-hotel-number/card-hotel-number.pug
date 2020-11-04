@@ -3,13 +3,12 @@ include ../rate-button/rate-button
 mixin cardHotelNumb(options)
 	.card-hotel-number
 		.card-hotel-number__gallery
-			img(class='card-hotel-number__image ' src=require("../components/card-hotel-number/gallery/" + options.src +".png") alt=options.src)
-			if (options.isArrows)
-				.card-hotel-number__arrows
-					div(class='card-hotel-number__arrow-prev')
-						i(class='arrow__prev material-icons') expand_more
-					div(class='card-hotel-number__arrow-next')
-						i(class='arrow__next material-icons') expand_more
+			img(class='card-hotel-number__image ' src=require("../../components/card-hotel-number/gallery/" + options.src +".png") alt=options.src)
+			.card-hotel-number__arrows
+				div(class='card-hotel-number__arrow-prev')
+					i(class='arrow__prev material-icons') expand_more
+				div(class='card-hotel-number__arrow-next')
+					i(class='arrow__next material-icons') expand_more
 			ul.card-hotel-number__list-points
 				li(class='card-hotel-number__point point--fill')
 				li(class='card-hotel-number__point')

@@ -11,7 +11,7 @@
 	&__avatar {
 		width: 48px;
 		height: 48px;
-		background: url('../components/user-comment/avatar/murad-sarafanov.svg') no-repeat 50% 30%;
+		background: url('../../components/user-comment/avatar/murad-sarafanov.svg') no-repeat 50% 30%;
 		box-sizing: border-box;
 		border-radius: 50%;
 		border: 2px solid #fff;
@@ -35,7 +35,7 @@
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	grid-column-gap: 10px;
-	&__button {//надо отцентрировать кнопку
+	&__button {
 		text-align: center;
 	}
 	&__text {

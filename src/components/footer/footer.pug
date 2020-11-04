@@ -7,7 +7,7 @@ mixin footer(options)
 	footer(class= footerClassName)
 		if (options.isMobile)
 			.footer__logo
-				img(class='footer__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+				img(class='footer__img' src=require('../../assets/images/logo/mainLogo.svg') alt='main logo')
 			span(class='footer__copyright font-level-body') Copyright © 2018 Toxin отель. Все права зачищены.
 			.footer__social-icons
 				each icon in ['twitter','facebook-square','instagram']
@@ -16,7 +16,7 @@ mixin footer(options)
 		else
 			.footer__header
 				.footer__information
-						img(class='footer__img' src=require('../assets/images/logo/mainLogo.svg') alt='main logo')
+						img(class='footer__img' src=require('../../assets/images/logo/mainLogo.svg') alt='main logo')
 						span(class='footer__text font-level-body') Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 				.footer__navigation
 					ul(class='footer__list footer__title font-level-h3') навигация

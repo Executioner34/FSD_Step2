@@ -5,19 +5,23 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { TRUE } = require('node-sass');
 const PATHS = {
-	source: path.join(__dirname, 'src'),
-	build: path.join(__dirname, 'docs')
+	source: path.join(__dirname, 'src/pages'),
+	build: path.join(__dirname, 'docs/')
 };
 
 // Экспорт модуля в node.js
 module.exports = {
 	// Точка входа в приложение.
-	entry: PATHS.source + '/index.js',
+	entry: {
+		landing: (`${PATHS.source}/landing/landing.js`),
+		uikit: (`${PATHS.source}/ui-kit/ui-kit.js`),
+	},
 	output: {
 		filename: '[name].js',
 		path: PATHS.build,
 	},
 	devServer: {
+		index: 'landing.html', //Запускаемый файл в режиме разработки
 		port: 9000,
 	},
 
@@ -76,8 +80,14 @@ module.exports = {
 	// plugins - плагины для кастомизации процесса сборки Webpack.
 	plugins: [
 		new HtmlWebpackPlugin({
-			filename: 'index.html',
-			template: './src/pages/ui-kit.pug',
+			filename: 'ui-kit.html',
+			template: './src/pages/ui-kit/ui-kit.pug',
+			chunks: 'ui-kit',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'landing.html',
+			template: './src/pages/landing/landing.pug',
+			chunks: 'landing',
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
