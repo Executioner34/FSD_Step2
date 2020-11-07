@@ -18,7 +18,7 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].js',
-		path: PATHS.build,
+		path: __dirname + '/docs',
 	},
 	devServer: {
 		index: 'landing.html', //Запускаемый файл в режиме разработки
@@ -82,12 +82,12 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'ui-kit.html',
 			template: './src/pages/ui-kit/ui-kit.pug',
-			chunks: 'ui-kit',
+			chunks: ['ui-kit'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'landing.html',
 			template: './src/pages/landing/landing.pug',
-			chunks: 'landing',
+			chunks: ['landing'],
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',

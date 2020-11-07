@@ -1,0 +1,43 @@
+@import 'reset-css';
+@import '~normalize.css';
+@import '../../assets/scss/fonts';
+@import '../../assets/scss/variables.scss';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/date-picker/date-picker';
+@import '../../components/dropdown/dropdown';
+@import '../../components/button/button';
+@import '../../components/textForm/textForm';
+
+html {
+	background-color: #ffffff;
+}
+
+body {
+	width: 100%;
+}
+
+main {
+	.main__background-image {
+		position: relative;
+		left: -47px;
+		top: -61px;
+		z-index: -1;
+		img {
+			width: 103%;
+		}
+		.main__card-date-picker {
+			position: absolute;
+			top: 140px;
+			left: 140px;
+		}
+		.main__text {
+			width: 297px;
+			position: absolute;
+			bottom: 18px;
+			right: 70px;
+			text-align: right;
+		}
+	}
+}
+

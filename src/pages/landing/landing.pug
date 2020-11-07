@@ -1,5 +1,17 @@
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/date-picker/date-picker
+
 doctype html
 html(lang="ru")
 	title landing
 	body
-		img.logo(src=require("../../assets/images/logo/defaultLogo.svg"), alt="logo")
+		+header({isLogin: true})
+		main
+			.main__background-image
+				img(src=require('../../assets/images/image/image-main.jpg'), alt="image")
+				.main__card-date-picker
+					+datePicker({title: 'Найдём номера под ваши пожелания', titleDateDropdownIn: 'прибытие', titleDateDropdownOut: 'выезд', titleDropdown: 'гости', buttonText: 'подобрать номер'})
+				.main__text
+					span(class='main__text font-level-body') Лучшие номера для вашей работы, отдыха и просто вдохновения
+		+footer({})
