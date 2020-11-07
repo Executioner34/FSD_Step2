@@ -1,10 +1,11 @@
 mixin pagination(name)
 	-
 		let linkClassName = 'pagination__link'
-	ul.pagination__list
-		each numbers in name
-			li
-				a(class=linkClassName class='font-level-h3' href='#')= numbers
-		a(class=linkClassName class='pagination__link--arrow-right font-level-h3' href='#')
-			span(class='material-icons') arrow_forward
-	span(class='pagination__text font-level-body') 1 – 12 из 100+ вариантов аренды
+	.pagination
+		ul.pagination__list
+			each numbers in name
+				li
+					a(class=linkClassName class='font-level-h3' href='#')= numbers
+			a(class=linkClassName class='pagination__link--arrow-right font-level-h3' href='#')
+				span(class='material-icons') arrow_forward
+		span(class='pagination__text font-level-body') 1 – 12 из 100+ вариантов аренды

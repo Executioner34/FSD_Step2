@@ -2,6 +2,7 @@
 	width: 266px;
 	display: inline-flex;
 	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 3px;
 	cursor: pointer;
 	.checkbox-list__button {
@@ -11,7 +12,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-left: 30px;
 		color: $dark-50;
 	};
 }

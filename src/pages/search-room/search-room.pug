@@ -1,0 +1,66 @@
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/textForm/textForm
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox/checkbox
+include ../../components/checkbox-list/checkbox-list
+include ../../components/card-hotel-number/card-hotel-number
+include ../../components/pagination/pagination
+
+doctype html
+html(lang="ru")
+	title search-room
+	body
+		+header({isLogin: true})
+		main(role='main')
+			article(class='main__toolsbar')
+				section(class='toolsbar__filter-input')
+					+inputTextForm({title: "даты пребывания в отеле", type: "text", placeholder: "19 авг - 23 авг", isFilterDateDropdown: true,})
+				section(class='toolsbar__guests-input')
+					+dropdown({title: 'гости', isGuests: true})
+				section(class='toolsbar__slider')
+					+rangeSlider({title: 'диапазон цены', count: '5 000₽ - 10 000₽', name: 'price', min: '5000', max: '10000', step: 1})
+					span(class='slider__text font-level-body') Стоимость за сутки пребывания в номере
+				section(class='toolsbar__checkboxs-rules')
+					span(class="checkboxs-rules__title font-level-h3") правила дома
+					+checkbox({text: "Можно курить", value: "smoking"})
+					+checkbox({text: "Можно с питомцами", value: "pets", isActive: true})
+					+checkbox({text: "Можно пригласить гостей (до 10 человек)", value: "guests", isActive: true})
+				section(class='toolsbar__rich-checkboxs')
+					span(class="rich-checkboxs__title font-level-h3") доступность
+					+checkbox({title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', isRich: true})
+					+checkbox({title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.', isRich: true})
+				section(class='toolsbar__number-room-input')
+					+dropdown({title: 'удобства номера'})
+				section(class='toolsbar__checkbox-list')
+					+checkboxList('дополнительные удобства', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], false)
+			article(class='main__hotel-numbers font-level-h1-ciril') Номера, которые мы для вас подобрали
+				.hotel-numbers
+					section(class='hotel-numbers__grid-area-1')
+						+cardHotelNumb({src: '№888', number: '888', isArrows: true, price: '9 990₽ ', isLux: true, reviews: '145 ', star: '5'})
+					section(class='hotel-numbers__grid-area-2')
+						+cardHotelNumb({src: '№840', number: '840', price: '9 990₽ ', reviews: '65 ', star: '4'})
+					section(class='hotel-numbers__grid-area-3')
+						+cardHotelNumb({src: '№980', number: '980', price: '8 500₽ ', reviews: '35 ', star: '3', isLux: true})
+					section(class='hotel-numbers__grid-area-4')
+						+cardHotelNumb({src: '№856', number: '856', price: '7 300₽ ', reviews: '19 ', star: '5',})
+					section(class='hotel-numbers__grid-area-5')
+						+cardHotelNumb({src: '№740', number: '740', price: '6 000₽ ', reviews: '44 ', star: '4',})
+					section(class='hotel-numbers__grid-area-6')
+						+cardHotelNumb({src: '№982', number: '982', price: '5 800₽ ', reviews: '56 ', star: '3',})
+					section(class='hotel-numbers__grid-area-7')
+						+cardHotelNumb({src: '№678', number: '678', price: '5 500₽ ', reviews: '45 ', star: '5',})
+					section(class='hotel-numbers__grid-area-8')
+						+cardHotelNumb({src: '№450', number: '450', price: '5 300₽ ', reviews: '39 ', star: '4',})
+					section(class='hotel-numbers__grid-area-9')
+						+cardHotelNumb({src: '№350', number: '350', price: '5 000₽ ', reviews: '77 ', star: '3',})
+					section(class='hotel-numbers__grid-area-10')
+						+cardHotelNumb({src: '№666', number: '666', price: '5 000₽ ', reviews: '25 ', star: '5',})
+					section(class='hotel-numbers__grid-area-11')
+						+cardHotelNumb({src: '№444', number: '444', price: '5 000₽ ', reviews: '15 ', star: '3',})
+					section(class='hotel-numbers__grid-area-6')
+						+cardHotelNumb({src: '№352', number: '352', price: '5 000₽ ', reviews: '55 ', star: '3',})
+				nav(class='main__navigation')
+					+pagination(['1', '2', '3', '...', '15'])
+		+footer({})

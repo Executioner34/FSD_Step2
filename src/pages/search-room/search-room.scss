@@ -1,0 +1,79 @@
+@import 'reset-css';
+@import '~normalize.css';
+@import '../../assets/scss/fonts';
+@import '../../assets/scss/variables.scss';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/button/button';
+@import '../../components/textForm/textForm';
+@import '../../components/dropdown/dropdown';
+@import '../../components/range-slider/range-slider';
+@import '../../components/checkbox/checkbox';
+@import '../../components/checkbox-list/checkbox-list';
+@import '../../components/card-hotel-number/card-hotel-number';
+@import '../../components/rate-button/rate-button';
+@import '../../components/pagination/pagination';
+
+main {
+	padding: 30px 140px 70px;
+	display: grid;
+	grid-template-columns: 266px 1fr;
+	grid-gap: 60px;
+	.main__toolsbar {
+		display: flex;
+		flex-direction: column;
+	}
+	.main__hotel-numbers {
+		.main__navigation {
+			width: 230px;
+			margin: auto;
+		}
+	}
+}
+
+.toolsbar {
+	&__filter-input {
+		margin-bottom: 20px;
+	}
+	&__guests-input {
+		margin-bottom: 30px;
+		.dropdown-guests {
+			width: 266px;
+		}
+	}
+	&__slider {
+		margin-bottom: 30px;
+		.slider__text {
+			font-size: 12px;
+		}
+	}
+	&__checkboxs-rules {
+		display: grid;
+		grid-gap: 7px;
+		margin-bottom: 30px;
+		.checkboxs-rules__title {
+			margin-bottom: 10px;
+		}
+	}
+	&__rich-checkboxs {
+		margin-bottom: 30px;
+		display: grid;
+		grid-gap: 10px;
+		.rich-checkboxs__title {
+			margin-bottom: 6px;
+		}
+	}
+	&__number-room-input {
+		margin-bottom: 30px;
+	}
+}
+
+.hotel-numbers {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-template-rows: min-content min-content min-content min-content;
+	grid-column-gap: 12px;
+	grid-row-gap: 20px;
+	margin-bottom: 20px;
+}
