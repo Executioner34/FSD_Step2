@@ -16,13 +16,14 @@ module.exports = {
 		landing: (`${PATHS.source}/landing/landing.js`),
 		uikit: (`${PATHS.source}/ui-kit/ui-kit.js`),
 		searchroom: (`${PATHS.source}/search-room/search-room.js`),
+		roomdetails: (`${PATHS.source}/room-details/room-details.js`),
 	},
 	output: {
 		filename: '[name].js',
 		path: __dirname + '/docs',
 	},
 	devServer: {
-		index: 'search-room.html', //Запускаемый файл в режиме разработки
+		index: 'room-details.html', //Запускаемый файл в режиме разработки
 		port: 9000,
 	},
 
@@ -94,6 +95,11 @@ module.exports = {
 			filename: 'search-room.html',
 			template: './src/pages/search-room/search-room.pug',
 			chunks: ['searchroom'],
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'room-details.html',
+			template: './src/pages/room-details/room-details.pug',
+			chunks: ['roomdetails'],
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
