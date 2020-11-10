@@ -14,7 +14,7 @@ module.exports = {
 	// Точка входа в приложение.
 	entry: {
 		landing: (`${PATHS.source}/landing/landing.js`),
-		uikit: (`${PATHS.source}/ui-kit/ui-kit.js`),
+		UIkit: (`${PATHS.source}/ui-kit/ui-kit.js`),
 		searchroom: (`${PATHS.source}/search-room/search-room.js`),
 		roomdetails: (`${PATHS.source}/room-details/room-details.js`),
 		registration: (`${PATHS.source}/registration/registration.js`),
@@ -88,7 +88,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'ui-kit.html',
 			template: './src/pages/ui-kit/ui-kit.pug',
-			chunks: ['uikit'],
+			chunks: ['UIkit'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'landing.html',
