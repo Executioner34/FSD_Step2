@@ -17,13 +17,15 @@ module.exports = {
 		uikit: (`${PATHS.source}/ui-kit/ui-kit.js`),
 		searchroom: (`${PATHS.source}/search-room/search-room.js`),
 		roomdetails: (`${PATHS.source}/room-details/room-details.js`),
+		registration: (`${PATHS.source}/registration/registration.js`),
+		signin: (`${PATHS.source}/sign-in/sign-in.js`),
 	},
 	output: {
 		filename: '[name].[hash].js',
 		path: __dirname + '/docs',
 	},
 	devServer: {
-		index: 'room-details.html', //Запускаемый файл в режиме разработки
+		index: 'sign-in.html', //Запускаемый файл в режиме разработки
 		port: 9000,
 	},
 
@@ -102,6 +104,16 @@ module.exports = {
 			filename: 'room-details.html',
 			template: './src/pages/room-details/room-details.pug',
 			chunks: ['roomdetails'],
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'registration.html',
+			template: './src/pages/registration/registration.pug',
+			chunks: ['registration'],
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'sign-in.html',
+			template: './src/pages/sign-in/sign-in.pug',
+			chunks: ['signin'],
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
