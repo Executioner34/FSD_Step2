@@ -1,5 +1,5 @@
 .user-comment__wrapper {
-	width: 710px;
+	min-width: 710px;
 	display: grid;
 	grid-template-rows: 48px min-content;
 	grid-row-gap: 10px;
@@ -11,7 +11,6 @@
 	&__avatar {
 		width: 48px;
 		height: 48px;
-		background: url('../../components/user-comment/avatar/murad-sarafanov.svg') no-repeat 50% 30%;
 		box-sizing: border-box;
 		border-radius: 50%;
 		border: 2px solid #fff;
@@ -35,10 +34,19 @@
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	grid-column-gap: 10px;
+	align-items: baseline;
 	&__button {
 		text-align: center;
 	}
 	&__text {
 		line-height: 24px;
 	}
+}
+
+.-murad- {
+	background: url('../../components/user-comment/avatar/murad-sarafanov.svg') no-repeat 50% 30%;
+}
+
+.-patrisse- {
+	background: url('../../components/user-comment/avatar/patrisse.svg') no-repeat 50% 30%;
 }

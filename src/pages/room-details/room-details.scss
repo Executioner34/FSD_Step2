@@ -6,6 +6,12 @@
 @import '../../components/footer/footer';
 @import '../../components/button/button';
 @import '../../components/textForm/textForm';
+@import '../../components/info-hotel-number/info-hotel-number';
+@import '../../components/book-hotel-number/book-hotel-number';
+@import '../../components/user-comment/user-comment';
+@import '../../components/like-button/like-button';
+@import '../../components/dropdown/dropdown';
+@import '../../components/bullet-list/bullet-list';
 
 main {
 	.main__images-room {
@@ -36,5 +42,64 @@ main {
 			background-image: url('../../assets/images/image/image-room888-3.jpg');
 			grid-area: img-3;
 		}
+	}
+	.main__content {
+		margin: auto;
+		box-sizing: border-box;
+		padding: 70px 140px;
+		display: grid;
+		justify-content: space-around;
+		grid-template-columns: 280px 340px 380px;
+		grid-column-gap: 70px;
+		grid-row-gap: 30px;
+		grid-template-areas: 
+		'info chart card'
+		'review review card'
+		'rules cancel card';
+		.content__infotmation-number {
+			grid-area: info;
+			display: grid;
+			row-gap: 20px;
+		}
+		.content__chart {
+			grid-area: chart;
+		}
+		.content__card-number {
+			grid-area: card;
+		}
+		.content__review-number {
+			grid-area: review;
+		}
+		.content__rules {
+			grid-area: rules;
+			display: grid;
+			row-gap: 20px;
+		}
+		.content__cancel {
+			grid-area: cancel;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.review-number {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	&__body {
+		display: grid;
+		row-gap: 20px;
+	}
+}
+
+.cancel {
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__text {
+		line-height: 1.5rem;
 	}
 }

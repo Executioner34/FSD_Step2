@@ -1,5 +1,9 @@
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/info-hotel-number/info-hotel-number
+include ../../components/book-hotel-number/book-hotel-number
+include ../../components/user-comment/user-comment
+include ../../components/bullet-list/bullet-list
 
 doctype html
 html(lang="ru")
@@ -11,3 +15,27 @@ html(lang="ru")
 				.images-room__1
 				.images-room__2
 				.images-room__3
+			article(class='main__content')
+				section(class='content__infotmation-number')
+					span(class='information__title font-level-h2-ciril') Сведения о номере
+					+infoHotelNumb({img: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены', isBorderBottom: true})
+					+infoHotelNumb({img: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален', isBorderBottom: true})
+					+infoHotelNumb({img: 'whatshot', title: 'Уют', text: 'Номер оснащён камином'})
+				section(class='content__chart')
+					span(class='chart__title font-level-h2-ciril') Впечатления от номера
+				section(class='content__card-number')
+					+bookHotelNumb({number: '888', price: '9 990₽ '})
+				section(class='content__review-number')
+					.review-number__header
+						span(class='review-number__title font-level-h2-ciril') Отзывы посетителей номера
+						span(class='review-number__subtitle font-level-body') 2 отзыва
+					.review-number__body
+						+userComment({userName: 'Мурад Сарафанов', isMurad: true, userText: '5 дней назад', likeIsActive: true, likeNumber: '12', commentText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+						+userComment({userName: 'Патрисия Стёклышкова', isPatrisse: true, userText: 'Неделю назад', likeNumber: '2', commentText: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+				section(class='content__rules')
+					span(class='rules__title font-level-h2-ciril') Правила
+					+bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+				section(class='content__cancel')
+					span(class='cancel__title font-level-h2-ciril') Отмена
+					span(class='cancel__text font-level-body') Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+		+footer({})

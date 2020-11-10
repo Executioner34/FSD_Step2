@@ -19,7 +19,7 @@ module.exports = {
 		roomdetails: (`${PATHS.source}/room-details/room-details.js`),
 	},
 	output: {
-		filename: '[name].js',
+		filename: '[name].[hash].js',
 		path: __dirname + '/docs',
 	},
 	devServer: {
@@ -44,7 +44,9 @@ module.exports = {
 				use: ["style-loader", MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
-						options: { sourceMap: true }
+						options: {
+							sourceMap: true
+						}
 					},
 				]},
 			//scss
