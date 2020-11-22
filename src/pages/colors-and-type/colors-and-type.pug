@@ -1,0 +1,17 @@
+include ../../components/colors/colors
+
+doctype html
+html(lang="ru")
+	title Colors & Type
+	body
+		img.logo(src=require("../../assets/images/logo/defaultLogo.svg"), alt="logo")
+		.container-colors-and-types
+			ul.colors
+				+rectangle({class: 'rectangle__color--100', title: 'Dark Shade 100%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--75', title: 'Dark Shade 75%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--50', title: 'Dark Shade 50%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--25', title: 'Dark Shade 25%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--5', title: 'Dark Shade 5%', text: '#1F2041'})
+				+rectangle({class: 'rectangle__color--purple', title: 'Purple', text: '#BC9CFF'})
+				+rectangle({class: 'rectangle__color--green', title: 'Green', text: '#6FCF97'})
+			include ../../components/types/types

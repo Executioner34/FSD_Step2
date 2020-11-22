@@ -6,11 +6,11 @@ include ../toggle/toggle
 mixin registrationCard(options)
 	.registration
 		.registration__title
-			span(class='title font-level-h1-ciril') Регистрация аккаунта
+			span(class='title font-level-h1') Регистрация аккаунта
 		.registration__input-first-name
-			input(type='text' class='input' placeholder='Имя')
+			+inputTextForm({placeholder: 'Имя'})
 		.registration__input-second-name
-			input(type='text' class='input' placeholder='Фамилия')
+			+inputTextForm({placeholder: 'Фамилия'})
 		.registration__radio-buttons
 			+radio({text: "Мужчина", value: "male", isActive: true})
 			+radio({text: "Женщина", value: "female"})

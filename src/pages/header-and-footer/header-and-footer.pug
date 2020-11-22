@@ -1,0 +1,17 @@
+include ../../components/header/header
+include ../../components/footer/footer
+
+doctype html
+html(lang="ru")
+	title Headers & Footers
+	body
+		img.logo(src=require("../../assets/images/logo/defaultLogo.svg"), alt="logo")
+		.container-headers-and-footers
+			.header-login
+				+header({isLogin: true})
+			.header-user
+				+header({userName: 'Юлий Цезарь'})
+			.footer-desktop
+				+footer({})
+			.footer-mobile
+				+footer({isMobile: true})

@@ -10,6 +10,7 @@ include ../../components/pagination/pagination
 
 doctype html
 html(lang="ru")
+	meta(name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86")
 	title search-room
 	body
 		+header({isLogin: true})
@@ -35,7 +36,7 @@ html(lang="ru")
 					+dropdown({title: 'удобства номера'})
 				section(class='toolsbar__checkbox-list')
 					+checkboxList('дополнительные удобства', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], false)
-			article(class='main__hotel-numbers font-level-h1-ciril') Номера, которые мы для вас подобрали
+			article(class='main__hotel-numbers font-level-h1') Номера, которые мы для вас подобрали
 				.hotel-numbers
 					section(class='hotel-numbers__grid-area-1')
 						+cardHotelNumb({src: '№888', number: '888', isArrows: true, price: '9 990₽ ', isLux: true, reviews: '145 ', star: '5'})

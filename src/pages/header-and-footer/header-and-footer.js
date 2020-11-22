@@ -1,0 +1,1 @@
+import './header-and-footer.scss';

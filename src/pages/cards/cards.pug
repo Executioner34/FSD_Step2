@@ -1,0 +1,26 @@
+include ../../components/date-picker/date-picker
+include ../../components/book-hotel-number/book-hotel-number
+include ../../components/registration-card/registration-card
+include ../../components/signin-card/signin-card
+include ../../components/card-hotel-number/card-hotel-number
+
+doctype html
+html(lang="ru")
+	title Cards
+	body
+		img.logo(src=require("../../assets/images/logo/defaultLogo.svg"), alt="logo")
+		.container-cards
+			.card-date-picker
+				+datePicker({title: 'Найдём номера под ваши пожелания', titleDateDropdownIn: 'прибытие', titleDateDropdownOut: 'выезд', titleDropdown: 'гости', buttonText: 'подобрать номер'})
+			.card-book-hotel-number
+				+bookHotelNumb({number: '888', price: '9 990₽ '})
+			.calendar
+				+inputTextForm({title: "date Dropdown", type: "text", placeholder: "19.08.2019", isDateDropdownActive: true})
+			.registration-card
+				+registrationCard()
+			.sign-in-card
+				+signIn()
+			.card-number-hotel
+				+cardHotelNumb({src: '№888', number: '888', isArrows: true, price: '9 990₽ ', isLux: true, reviews: '145 ', star: '5'})
+			.card-number-hotel
+				+cardHotelNumb({src: '№840', number: '840', price: '9 990₽ ', reviews: '65 ', star: '4'})

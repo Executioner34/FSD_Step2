@@ -3,7 +3,7 @@ include ../textForm/textForm
 mixin footer(options)
 	-
 		var footerClassName = 'footer'
-		footerClassName += options.isMobile ? ' footer--mobile' : ''
+		footerClassName += options.isMobile ? ' footer--mobile-active' : ''
 	footer(class= footerClassName)
 		if (options.isMobile)
 			.footer__logo
@@ -38,7 +38,7 @@ mixin footer(options)
 						li
 							span(class='subscribe__text font-level-body') Получайте специальные предложения и новости сервиса
 						li
-							+inputTextForm({type: "email", placeholder: "Email"})
+							+inputTextForm({type: "email", placeholder: "Email", isSubscribe: true})
 			.footer__footer
 				span(class='footer__copyright font-level-body') Copyright © 2018 Toxin отель. Все права зачищены.
 				.footer__social-icons

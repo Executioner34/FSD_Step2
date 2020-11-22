@@ -16,16 +16,16 @@ $primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 $secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
-%font-quicksand-h1 {
-	font-family: Quicksand;
+%font-montserrat-h1 {
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 1.5rem;
 	color: $dark-100;
 }
 
-%font-quicksand-h2 {
-	font-family: Quicksand;
+%font-montserrat-h2 {
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 1.188rem;
@@ -49,28 +49,12 @@ $secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 	color: $dark-75;
 }
 
-%font-openSans-h1 {
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 1.5rem;
-	color: $dark-100;
-}
-
-%font-openSans-h2 {
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 1.188rem;
-	color: $dark-100;
-}
-
 .font-level-h1 {
-	@extend %font-quicksand-h1;
+	@extend %font-montserrat-h1;
 }
 
 .font-level-h2 {
-	@extend %font-quicksand-h2;
+	@extend %font-montserrat-h2;
 }
 
 .font-level-h3 {
@@ -79,12 +63,4 @@ $secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 .font-level-body {
 	@extend %font-montserrat-body;
-}
-
-.font-level-h1-ciril {
-	@extend %font-openSans-h1;
-}
-
-.font-level-h2-ciril {
-	@extend %font-openSans-h2;
 }

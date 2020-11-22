@@ -4,12 +4,12 @@ include ../../components/date-picker/date-picker
 
 doctype html
 html(lang="ru")
+	meta(name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86")
 	title landing
 	body
 		+header({isLogin: true})
 		main(role='main')
 			.main__background-image
-				img(src=require('../../assets/images/image/image-main.jpg'), alt="image")
 				.main__card-date-picker
 					+datePicker({title: 'Найдём номера под ваши пожелания', titleDateDropdownIn: 'прибытие', titleDateDropdownOut: 'выезд', titleDropdown: 'гости', buttonText: 'подобрать номер'})
 				.main__text

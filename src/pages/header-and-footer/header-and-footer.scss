@@ -1,0 +1,27 @@
+@import 'reset-css';
+@import '~normalize.css';
+@import '../../assets/scss/fonts';
+@import '../../assets/scss/variables.scss';
+@import '../../components/textForm/textForm';
+@import '../../components/button/button';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+
+body {
+	background: #E5E5E5;
+}
+
+.logo {
+	margin: 30px 0 67px 30px;
+}
+
+.container-headers-and-footers {
+	padding-bottom: 140px;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-gap: 40px;
+
+	.footer-mobile {
+		margin: 0 auto;
+	}
+}

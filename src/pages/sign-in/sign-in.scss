@@ -27,3 +27,31 @@
 		padding-bottom: 172px;
 	}
 }
+
+@media screen and (max-width:1200px) and (min-width:992px) {
+	.main__sign-in-card {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+}
+
+@media screen and (max-width:991px) and (min-width:768px) {
+	.main__sign-in-card {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+}
+
+@media screen and (max-width:767px) and (min-width:576px) {
+	.main__sign-in-card {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.main__sign-in-card {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}

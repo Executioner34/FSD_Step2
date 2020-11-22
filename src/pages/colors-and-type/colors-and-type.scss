@@ -1,0 +1,18 @@
+@import 'reset-css';
+@import '~normalize.css';
+@import '../../assets/scss/fonts';
+@import '../../assets/scss/variables.scss';
+@import '../../components/colors/colors';
+@import '../../components/types/types';
+
+.logo {
+	margin: 30px 0 67px 30px;
+}
+
+.container-colors-and-types {
+	justify-content: center;
+	display: grid;
+	grid-template-rows: 610px;
+	grid-template-columns: 270px 403px;
+	grid-gap: 427px;
+}

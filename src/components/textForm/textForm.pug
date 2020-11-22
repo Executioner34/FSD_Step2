@@ -2,19 +2,33 @@ include ./_textForm-header/textForm-header
 
 mixin inputTextForm(options)
 	-
-		var inputClassName = "input"
-		inputClassName += options.isFocus ? " input--active" : ""
-		inputClassName += options.isDropdown ? " dropdown-input material-icons" : ""
-		inputClassName += options.isButton ? " input-button" : ""
-		inputClassName += options.isDateDropdown ? " input-date-dropdown datepicker-here material-icons" : ""
-		inputClassName += options.isFilterDateDropdown ? " input-filter-date-dropdown datepicker-here material-icons" : ""
-		inputClassName += options.isSubscribe ? " input-subscribe material-icons" : ""
-	.text-form
-		if (options.isDateDropdownActive)
-			.datepicker-here(data-clear-button= "true" data-range="true" data-prev-html="<span>arrow_back</span>" data-next-html="<span>arrow_forward</span>")
-		else
+		let inputClassName = 'text-form__input'
+		inputClassName += options.isFocus ? ' input--active' : ''
+		inputClassName += options.isDropdown ? ' input--dropdown' : ''
+		inputClassName += options.isDateDropdown ? ' input--date-dropdown' : ''
+		inputClassName += options.isFilterDateDropdown ? ' input--filter' : ''
+		inputClassName += options.isSubscribe ? ' input--subscribe' : ''
+		let buttonClassName = 'material-icons '
+		buttonClassName += options.isDropdown || options.isDateDropdown ? 'input__button--expand' : ''
+		buttonClassName += options.isSubscribe ? 'input__buttons--arrow' : ''
+	if (options.isDateDropdownActive)
+		.datepicker-here(data-clear-button='true' data-range='true' data-prev-html='<span>arrow_back</span>' data-next-html='<span>arrow_forward</span>')
+	else 
+		form.text-form
 			+HeaderTextForm({title: options.title, text: options.text})
 			if (options.isDateDropdown)
-				input(class=inputClassName type=text placeholder=options.placeholder data-select-other-years= "false" data-clear-button= "true" data-prev-html="<span>arrow_back</span>" data-next-html="<span>arrow_forward</span>")
+				div(class=inputClassName)
+					input(class='datepicker-here' type="text" placeholder=options.placeholder data-select-other-years='false' data-clear-button='true' data-prev-html='<span>arrow_back</span>' data-next-html='<span>arrow_forward</span>')
+					i(class=buttonClassName) expand_more
+			else if (options.isFilterDateDropdown)
+				div(class=inputClassName)
+					input(class='datepicker-here' type="text" placeholder=options.placeholder data-range="true" data-multiple-dates-separator=" - " data-select-other-years='false' data-clear-button='true' data-prev-html='<span>arrow_back</span>' data-next-html='<span>arrow_forward</span>')
+					i(class=buttonClassName) expand_more
 			else
-				input(class=inputClassName type=options.type placeholder=options.placeholder)
+				if (options.isSubscribe)
+					div(class=inputClassName)
+						input(type='email' placeholder=options.placeholder)
+						i(class=buttonClassName) arrow_forward
+				else
+					div(class=inputClassName)
+						input(type="text" placeholder=options.placeholder)

@@ -5,7 +5,11 @@ FSD education program.
 
 ### UI kit
 
-  - [UI-kit](https://executioner34.github.io/FSD_Step2/ui-kit.html)
+  - [Colors & Type](https://executioner34.github.io/FSD_Step2/colors-and-type.html)
+  - [Form Elements](https://executioner34.github.io/FSD_Step2/form-elements.html)
+  - [Cards](https://executioner34.github.io/FSD_Step2/cards.html)
+  - [Header and Footer](https://executioner34.github.io/FSD_Step2/header-and-footer.html)
+
 
 ### Website pages
 

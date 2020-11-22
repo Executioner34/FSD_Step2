@@ -17,27 +17,69 @@ body {
 	width: 100%;
 }
 
-main {
+.main__background-image {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url('../../assets/images/image/image-main.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 98%;
+	padding: 8vh 10.1vw 18px;
+	.main__card-date-picker {
+		max-width: 380px;
+		align-self: flex-start;
+	}
+	.main__text {
+		margin-top: 320px;
+		max-width: 297px;
+		line-height: 24px;
+		text-align: right;
+		align-self: flex-end;
+	}
+}
+
+@media screen and (max-width:1200px) and (min-width:992px) {
 	.main__background-image {
-		position: relative;
-		left: -47px;
-		top: -61px;
-		z-index: -1;
-		img {
-			width: 103%;
-		}
-		.main__card-date-picker {
-			position: absolute;
-			top: 140px;
-			left: 140px;
-		}
 		.main__text {
-			width: 297px;
-			position: absolute;
-			bottom: 18px;
-			right: 70px;
-			text-align: right;
+			margin-top: 280px;
 		}
 	}
 }
 
+@media screen and (max-width:991px) and (min-width:768px) {
+	.main__background-image {
+		.main__text {
+			margin-top: 220px;
+		}
+	}
+}
+
+@media screen and (max-width:767px) and (min-width:576px) {
+	.main__background-image {
+		.main__text {
+			margin-top: 160px;
+		}
+	}
+}
+
+@media screen and (max-width:575px) {
+	.main__background-image {
+		.main__text {
+			margin-top: 120px;
+			align-self: flex-end;
+		}
+		.main__card-date-picker {
+			align-self: center;
+		}
+	}
+}
+
+@media screen and (max-width:370px) {
+	.main__background-image {
+		padding: 30px 0 18px;
+		.main__card-date-picker {
+			width: 320px;
+		}
+	}
+}

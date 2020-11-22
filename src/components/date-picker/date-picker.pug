@@ -4,7 +4,7 @@ include ../textForm/textForm
 
 mixin datePicker(options)
 	.date-picker
-		span(class='date-picker__title font-level-h1-ciril')=options.title
+		span(class='date-picker__title font-level-h1')=options.title
 		.date-picker__date-dropdown
 			+inputTextForm({title: options.titleDateDropdownIn, type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
 			+inputTextForm({title: options.titleDateDropdownOut, type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
