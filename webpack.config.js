@@ -14,15 +14,15 @@ const PATHS = {
 module.exports = {
 	// Точка входа в приложение.
 	entry: {
-		colorsAndType: (`${PATHS.source}/colors-and-type/colors-and-type.js`),
-		formElements: (`${PATHS.source}/form-elements/form-elements.js`),
+		colorsandtype: (`${PATHS.source}/colors-and-type/colors-and-type.js`),
+		formelements: (`${PATHS.source}/form-elements/form-elements.js`),
 		cards: (`${PATHS.source}/cards/cards.js`),
-		headerAndFooter: (`${PATHS.source}/header-and-footer/header-and-footer.js`),
+		headerandfooter: (`${PATHS.source}/header-and-footer/header-and-footer.js`),
 		landing: (`${PATHS.source}/landing/landing.js`),
-		searchRoom: (`${PATHS.source}/search-room/search-room.js`),
-		roomDetails: (`${PATHS.source}/room-details/room-details.js`),
+		searchroom: (`${PATHS.source}/search-room/search-room.js`),
+		roomdetails: (`${PATHS.source}/room-details/room-details.js`),
 		registration: (`${PATHS.source}/registration/registration.js`),
-		signIn: (`${PATHS.source}/sign-in/sign-in.js`),
+		signin: (`${PATHS.source}/sign-in/sign-in.js`),
 	},
 	output: {
 		filename: '[name].[hash].js',
@@ -92,12 +92,12 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'colors-and-type.html',
 			template: './src/pages/colors-and-type/colors-and-type.pug',
-			chunks: ['colorsAndType'],
+			chunks: ['colorsandtype'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'form-elements.html',
 			template: './src/pages/form-elements/form-elements.pug',
-			chunks: ['formElements'],
+			chunks: ['formelements'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'cards.html',
@@ -107,7 +107,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'header-and-footer.html',
 			template: './src/pages/header-and-footer/header-and-footer.pug',
-			chunks: ['headerAndFooter'],
+			chunks: ['headerandfooter'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'landing.html',
@@ -117,12 +117,12 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'search-room.html',
 			template: './src/pages/search-room/search-room.pug',
-			chunks: ['searchRoom'],
+			chunks: ['searchroom'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'room-details.html',
 			template: './src/pages/room-details/room-details.pug',
-			chunks: ['roomDetails'],
+			chunks: ['roomdetails'],
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'registration.html',
@@ -132,10 +132,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'sign-in.html',
 			template: './src/pages/sign-in/sign-in.pug',
-			chunks: ['signIn'],
+			chunks: ['signin'],
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
+			filename: '[name].[hash].css',
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery/dist/jquery.min.js',
