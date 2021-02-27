@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { TRUE } = require('node-sass');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
@@ -29,7 +28,7 @@ module.exports = {
 		path: __dirname + '/docs',
 	},
 	devServer: {
-		index: 'landing.html', //Запускаемый файл в режиме разработки
+		index: 'form-elements.html', //Запускаемый файл в режиме разработки
 		port: 9000,
 	},
 
@@ -138,9 +137,9 @@ module.exports = {
 			filename: '[name].[hash].css',
 		}),
 		new webpack.ProvidePlugin({
-			$: 'jquery/dist/jquery.min.js',
-			jQuery: 'jquery/dist/jquery.min.js',
-			'window.jQuery': 'jquery/dist/jquery.min.js',
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery',
 		}),
 		new FaviconsWebpackPlugin({
 			logo: './src/assets/favicon/favicon.svg',

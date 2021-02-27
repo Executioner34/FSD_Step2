@@ -1,11 +1,11 @@
 mixin likeButton(options)
 	-
-		var btnClassName = "like-button__button"
-		btnClassName += options.isActive ? " js-like-button__button--active" : ""
-		var likeClassName = "like-button__like"
-		likeClassName += options.isActive ? " js-like-button__like--active" : ""
-		var numberClassName = "like-button__number"
-		numberClassName += options.isActive ? " js-like-button__number--active" : ""
+		var btnClassName = "like-button__button js-like-button__button"
+		btnClassName += options.isActive ? " button--active" : ""
+		var likeClassName = "like-button__like js-like-button__like"
+		likeClassName += options.isActive ? " like--active" : ""
+		var numberClassName = "like-button__number js-like-button__number"
+		numberClassName += options.isActive ? " number--active" : ""
 	.like-button__wrapper
 		button(class=btnClassName type="button")
 			if (options.isActive)

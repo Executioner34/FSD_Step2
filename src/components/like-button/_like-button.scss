@@ -22,7 +22,7 @@
 	}
 }
 
-.like-button__wrapper .js-like-button__button--active::after {
+.like-button__wrapper .button--active::after {
 	background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
@@ -38,7 +38,7 @@
 	color: $dark-25;
 }
 
-.js-like-button__like--active,
-.js-like-button__number--active {
+.like--active,
+.number--active {
 	color: $purple;
 }
