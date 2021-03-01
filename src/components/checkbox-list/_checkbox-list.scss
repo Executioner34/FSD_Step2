@@ -1,10 +1,12 @@
 .checkbox-list__wrapper {
-	width: 266px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 3px;
-	cursor: pointer;
+	max-width: 266px;
+	.checkbox-list__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 3px;
+		cursor: pointer;
+	}
 	.checkbox-list__button {
 		width: 44px;
 		height: 44px;
@@ -14,13 +16,16 @@
 		align-items: center;
 		color: $dark-50;
 	};
-}
+	.checkbox-list__list {
+		width: 266px;
+		display: flex;
+		flex-direction: column;
 
-.checkbox-list__list {
-	width: 266px;
-	display: flex;
-	flex-direction: column;
-	.checkbox-button {
-		margin-bottom: 10px;
+		.checkbox-button {
+			margin-bottom: 10px;
+		}
+	}
+	.list--hidden {
+		display: none;
 	}
 }
