@@ -6,7 +6,7 @@ mixin likeButton(options)
 		likeClassName += options.isActive ? " like--active" : ""
 		var numberClassName = "like-button__number js-like-button__number"
 		numberClassName += options.isActive ? " number--active" : ""
-	.like-button__wrapper
+	div(class='like-button__wrapper js-like-button')
 		button(class=btnClassName type="button")
 			if (options.isActive)
 				span(class=likeClassName class='material-icons') favorite

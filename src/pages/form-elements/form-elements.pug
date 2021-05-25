@@ -7,11 +7,11 @@ include ../../components/rate-button/rate-button
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
-include ../../components/dropdown/dropdown
 include ../../components/checkbox-list/checkbox-list
 include ../../components/bullet-list/bullet-list
 include ../../components/info-hotel-number/info-hotel-number
 include ../../components/user-comment/user-comment
+include ../../components/dropdown/dropdown
 
 doctype html
 html(lang="ru")
@@ -74,14 +74,15 @@ html(lang="ru")
 					span(class="pagination__title font-level-h3") pagination
 					+pagination(['1', '2', '3', '...', '15'])
 			.dropdown-item-1
-				+dropdown({title: 'Dropdown', text: 'Default'})
-				+dropdown({title: 'Dropdown', text: 'expanded'})
+				+Dropdown({isDefault: true})
+				+Dropdown({isOpen: true})
 			.dropdown-item-2
-				+dropdown({title: 'Dropdown', isGuests: true})
+				+Dropdown({isGuests: true})
 			.dropdown-item-3
-				+dropdown({title: 'Dropdown', isGuests: true})
+				+Dropdown({isGuests: true})
 			.checkbox-lists
 				+checkboxList('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], false)
+				+checkboxList('expandable checkbox list', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], true)
 			.checkbox-rich-buttons
 				span(class="checkbox-rich-buttons__title font-level-h3") rich Checkbox Buttons
 				+checkbox({title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', isRich: true})

@@ -4,7 +4,7 @@ mixin inputTextForm(options)
 	-
 		let inputClassName = 'text-form__input'
 		inputClassName += options.isFocus ? ' input--active' : ''
-		inputClassName += options.isDropdown ? ' input--dropdown' : ''
+		inputClassName += options.isDropdown ? ' js-dropdown-selection' : ''
 		inputClassName += options.isDateDropdown ? ' input--date-dropdown' : ''
 		inputClassName += options.isFilterDateDropdown ? ' input--filter' : ''
 		inputClassName += options.isSubscribe ? ' input--subscribe' : ''
@@ -23,6 +23,10 @@ mixin inputTextForm(options)
 			else if (options.isFilterDateDropdown)
 				div(class=inputClassName)
 					input(class='datepicker-here' type="text" placeholder=options.placeholder data-range="true" data-multiple-dates-separator=" - " data-select-other-years='false' data-clear-button='true' data-prev-html='<span>arrow_back</span>' data-next-html='<span>arrow_forward</span>')
+					i(class=buttonClassName) expand_more
+			else if (options.isDropdown)
+				div(class=inputClassName)
+					input(class= 'js-dropdown-input' type="text" placeholder=options.placeholder)
 					i(class=buttonClassName) expand_more
 			else
 				if (options.isSubscribe)

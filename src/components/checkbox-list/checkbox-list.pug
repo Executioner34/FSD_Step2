@@ -2,13 +2,15 @@ include ../checkbox/checkbox
 
 mixin checkboxList (listTitle, checkboxName, isActiveList)
 	-
-		var listClassName = 'checkbox-list__list'
+		var listClassName = 'checkbox-list__list js-checkbox-list__list'
 		listClassName += isActiveList ? '' : ' list--hidden'
-	.checkbox-list
+		var buttonArrowDropDown = 'checkbox-list__button js-checkbox-list__button material-icons'
+		buttonArrowDropDown += isActiveList ? ' checkbox-list__button--active' : ''
+	div(class='checkbox-list js-checkbox-list')
 		div(class='checkbox-list__wrapper')
-			div(class='checkbox-list__title js-checkbox-list')
+			div(class='checkbox-list__title js-checkbox-list__title')
 				div(class='checkbox-list__text font-level-h3')=listTitle
-				div(class='checkbox-list__button material-icons') expand_more
+				div(class=buttonArrowDropDown) expand_more
 			ul(class=listClassName)
 				each name in checkboxName
 					li

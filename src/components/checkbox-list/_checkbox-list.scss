@@ -15,6 +15,12 @@
 		justify-content: center;
 		align-items: center;
 		color: $dark-50;
+		transform: rotate(180deg);
+		transition: all .5s;
+		}
+
+	.checkbox-list__button--active {
+		transform: rotate(0deg);
 	};
 	.checkbox-list__list {
 		width: 266px;

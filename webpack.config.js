@@ -28,7 +28,7 @@ module.exports = {
 		path: __dirname + '/docs',
 	},
 	devServer: {
-		index: 'form-elements.html', //Запускаемый файл в режиме разработки
+		index: 'room-details.html', //Запускаемый файл в режиме разработки
 		port: 9000,
 	},
 

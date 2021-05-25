@@ -9,6 +9,6 @@ mixin datePicker(options)
 			+inputTextForm({title: options.titleDateDropdownIn, type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
 			+inputTextForm({title: options.titleDateDropdownOut, type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
 		.date-picker__dropdown
-			+dropdown({title: options.titleDropdown, isGuests: true})
+			+Dropdown({isGuests: true})
 		.date-picker__button
 			+button({text: options.buttonText, bigSize: true})

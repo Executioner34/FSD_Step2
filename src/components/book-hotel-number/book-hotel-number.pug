@@ -16,7 +16,7 @@ mixin bookHotelNumb(options)
 			+inputTextForm({title: 'прибытие', type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
 			+inputTextForm({title: 'выезд', type: "text", placeholder: "ДД.ММ.ГГГГ", isDateDropdown: true})
 		.book-hotel-number__dropdown
-			+dropdown({title: 'гости', isGuests: true})
+			+Dropdown({isGuests: true})
 		.book-hotel-number__price
 			.price__days(class='font-level-body')
 				.days__text #{options.price}х 4 суток
